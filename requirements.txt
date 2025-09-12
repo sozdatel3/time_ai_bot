@@ -55,3 +55,4 @@ pydantic_core
 python-dateutil
 python-dotenv
 matplotlib
+telethon

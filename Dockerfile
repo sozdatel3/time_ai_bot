@@ -12,6 +12,8 @@ RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
        tzdata \
        fonts-dejavu \
+       build-essential \
+       pkg-config \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies first (better layer caching)
@@ -25,7 +27,4 @@ COPY charts /app/charts
 
 # Default volume for sqlite database
 VOLUME ["/app/data"]
-
-CMD ["python", "-m", "src.main"]
-
-
+CMD ["sh", "-c", "cd src && python3 -m main"]

@@ -54,3 +54,4 @@ tzlocal==5.2
 watchdog==5.0.0
 XlsxWriter==3.2.0
 yarl==1.9.7
+telethon
