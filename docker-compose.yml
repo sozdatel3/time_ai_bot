@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  bot:
+    build: .
+    container_name: timeai_bot
+    env_file:
+      - .env
+    environment:
+      - TZ=${TZ:-UTC}
+      - DB__URL=${DB__URL:-sqlite+aiosqlite:////app/data/bot.db}
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
+
+
