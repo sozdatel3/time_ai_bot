@@ -14,6 +14,7 @@ from aiogram_dialog.widgets.kbd import (
     Start,
     Url,
 )
+from aiogram_dialog.widgets.media import DynamicMedia
 from aiogram_dialog.widgets.text import Const, Format
 
 from config.config import ADMIN_IDS, get_config
@@ -279,7 +280,7 @@ yoga_club_dialog = Dialog(
         state=YogaClubStates.choose_language,
     ),
     Window(
-        # DynamicMedia("main_photo", when="main_photo"),
+        DynamicMedia("main_photo", when="main_photo"),
         Format("{title}"),
         Button(
             Format("{publications_button}"),
