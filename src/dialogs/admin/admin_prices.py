@@ -42,7 +42,7 @@ async def get_prices_list(dialog_manager: DialogManager, **_):
     # print("PRICES LIST")
     # print(prices_list)
     # rich = await get_pay_photo_attachment(
-    #     dialog_manager.event.bot, "src/misk/navigation/rich1.png"
+    #     dialog_manager.event.bot, "misk/navigation/rich1.png"
     # )
     return {
         "prices_text": prices_text,

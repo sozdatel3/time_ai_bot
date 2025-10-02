@@ -25,7 +25,7 @@ spam_types = {
 
 Жмите <b><i>«Продолжить»</i></b> — ваше место в сообществе сохранено до завтра!
         """,
-        "photo_path": "src/misk/spam/2444.png",
+        "photo_path": "misk/spam/2444.png",
         # "photo_path": None,
         "keyboard": [
             {
@@ -60,7 +60,7 @@ spam_types = {
 </i>
 Жмите <b><i>«Оформить подписку»</i></b> и увидимся в закрытом сообществе 🫂
         """,
-        "photo_path": "src/misk/spam/end_of_period.png",
+        "photo_path": "misk/spam/end_of_period.png",
         "keyboard": [
             {
                 "text": "> Оформить подписку <",
@@ -91,7 +91,7 @@ spam_types = {
 
 <b><i>{name}, вы значимы для нашего сообщества.</i></b> Спасибо, что развиваетесь вместе со мной 🌒
         """,
-        "photo_path": "src/misk/spam/subscription_is_active.png",
+        "photo_path": "misk/spam/subscription_is_active.png",
     },
     "reminder_about_3_days_before_end_of_subscription": {
         "message": """
@@ -111,7 +111,7 @@ spam_types = {
 
 <i>p.s. Вы уже на пути к лучшей версии себя.</i><i><b> Не сворачивайте с дороги,</b> где каждое вложение в себя приумножается!</i>        
         """,
-        "photo_path": "src/misk/spam/reminder_about_3_days_before_end_of_subscription.png",
+        "photo_path": "misk/spam/reminder_about_3_days_before_end_of_subscription.png",
     },
     "lazy_user_after_registration": {
         "message": """<i>{name}, ваша мечта ждёт </i><b><i>— начните пробный период прямо сейчас</i></b> 🚀
@@ -139,7 +139,7 @@ spam_types = {
 
 <b><i>Присоединяйтесь ✨</i></b>
         """,
-        "photo_path": "src/misk/spam/lazy_user_after_registration.png",
+        "photo_path": "misk/spam/lazy_user_after_registration.png",
         # "repl": "https://t.me/yoga_club_bot?start=free_yoga_club_1234567890"
         "keyboard": [
             {
@@ -167,7 +167,7 @@ spam_types = {
 
 <i>p.s. Помните: даже героям иногда нужна пауза. </i><b><i>Но настоящие герои возвращаются</i></b>⚡️
         """,
-        "photo_path": "src/misk/spam/u_go_home.png",
+        "photo_path": "misk/spam/u_go_home.png",
     },
     "u_go_home": {
         "message": """
@@ -193,7 +193,7 @@ spam_types = {
 
 Спасибо, что были с нами. <b><i>Вы — важная часть нашего сообщества,</i></b> и мы верим, что <u><i>ваше возвращение</i></u> станет новым витком вашей трансформации!
         """,
-        "photo_path": "src/misk/spam/u_go_home_by_yourself.png",
+        "photo_path": "misk/spam/u_go_home_by_yourself.png",
         "keyboard": [
             {
                 "text": "> Напомнить о старте продаж <",
@@ -221,7 +221,7 @@ spam_types = {
 
 <i>Успейте войти → </i><b><i>завтра будет поздно</i></b>⚡️
         """,
-        "photo_path": "src/misk/spam/12_hours_before_end_of_sales.png",
+        "photo_path": "misk/spam/12_hours_before_end_of_sales.png",
         "keyboard": [
             {
                 "text": "> Оформить подписку <",
@@ -240,7 +240,7 @@ spam_types = {
 <i><b>Запустите свою трансформацию!</b> </i>
 <i>До окончания продаж осталось всего 6 часов</i> 🚀
 """,
-        "photo_path": "src/misk/spam/6_hours_before_end_of_sales.png",
+        "photo_path": "misk/spam/6_hours_before_end_of_sales.png",
         "keyboard": [
             {
                 "text": "> Оформить подписку <",
@@ -270,7 +270,7 @@ spam_types = {
 Жмите <b><i>«Оформить подписку»</i></b> — мечта не ждёт 💜
 
 """,
-        "photo_path": "src/misk/spam/feedback_from_admin.png",
+        "photo_path": "misk/spam/feedback_from_admin.png",
         "keyboard": [
             {
                 "text": "> Оформить подписку <",
@@ -308,7 +308,7 @@ spam_types = {
 
 <i>p.s. Через час ваша жизнь разделится на «до» и «после». </i><b><i>Выбор за вами</i></b> <b><i>💜</i></b>
         """,
-        "photo_path": "src/misk/spam/1_hour_before_end_of_sales.png",
+        "photo_path": "misk/spam/1_hour_before_end_of_sales.png",
         "keyboard": [
             {
                 "text": "> Оформить подписку <",
@@ -345,7 +345,7 @@ spam_types = {
 
 Спасибо, что вы с нами и помогаете другим на их пути! 
 <b><i>Желаем вам ярких результатов</i></b> 💜""",
-        "photo_path": "src/misk/spam/thanks_for_referral.png",
+        "photo_path": "misk/spam/thanks_for_referral.png",
     },
     "subscription_is_extended": {
         "message": """
@@ -417,7 +417,7 @@ spam_types = {
 
 <i>p.s. Это не </i><i><b>«просто подписка»</b>, это точка, где ваши решения становятся результатами.</i>
 """,
-        "photo_path": "src/misk/spam/24_before_sales.png",
+        "photo_path": "misk/spam/24_before_sales.png",
         "keyboard": [
             {
                 "text": "> Оформить подписку <",

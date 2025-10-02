@@ -39,7 +39,7 @@ async def yoga_club_getter(dialog_manager: DialogManager, **_):
 
         if dialog_manager.dialog_data.get("main_photo") is None:
             main_photo = await get_pay_photo_attachment(
-                bot, "src/misk/navigation/main.png"
+                bot, "misk/navigation/main.png"
             )
             dialog_manager.dialog_data["main_photo"] = main_photo
         else:

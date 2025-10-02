@@ -115,7 +115,7 @@ class PaymentHandler:
             # Send certificate image first
             await self.bot.send_photo(
                 order.user_id,
-                photo=FSInputFile("src/misk/sertificate.PNG"),
+                photo=FSInputFile("misk/sertificate.PNG"),
                 caption=f"Спасибо за покупку сертификата!\n\nНе переходи по этой ссылке - перешли это сообщение получателю и он получит сууму сертификата на баланс! Вот <a href='{certificate.url}'>ссылка для активации</a>",
             )
         else:
@@ -167,7 +167,7 @@ class PaymentHandler:
     async def _handle_yoga_club_payment(self, order: Order):
         await self.bot.send_photo(
             order.user_id,
-            photo=FSInputFile("src/misk/spam/subscription_is_active.png"),
+            photo=FSInputFile("misk/spam/subscription_is_active.png"),
             caption="""
 <b><i>Добро пожаловать в круг избранных 🫂</i></b>
 

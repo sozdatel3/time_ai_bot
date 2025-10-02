@@ -38,7 +38,7 @@ async def on_confirm_certificate(
     try:
         # Отправляем изображение сертификата и ссылку для активации
         await c.message.answer_photo(
-            photo=FSInputFile("src/misk/sertificate.png"),
+            photo=FSInputFile("misk/sertificate.png"),
             caption=f"Сертификат на сумму {amount}рублей\n\n"
             f"Отправьте это сообщение получателю сертификата.\n"
             f"Ссылка для активации: {certificate.url}",

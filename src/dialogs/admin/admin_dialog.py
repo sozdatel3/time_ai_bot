@@ -49,7 +49,7 @@ async def admin_access_middleware(event, data):
 async def get_materials_list(dialog_manager: DialogManager, **_):
     materials = await get_useful_materials()
     materials_photo = await get_pay_photo_attachment(
-        dialog_manager.event.bot, "src/misk/navigation/usefull_admin.png"
+        dialog_manager.event.bot, "misk/navigation/usefull_admin.png"
     )
     return {
         "materials": materials,
@@ -179,7 +179,7 @@ async def notify_users_handler(
             )
             await c.bot.send_photo(
                 user_id,
-                FSInputFile("src/misk/spam/material.png"),
+                FSInputFile("misk/spam/material.png"),
                 # f"Новый полезный материал '{material.name}' доступен! Проверьте раздел 'Полезные материалы'.",
                 caption="""
 <i>🌪️ Сила мысли в действии! </i>
@@ -311,14 +311,14 @@ async def stop_payment(
 
 async def get_rich(dialog_manager: DialogManager, **_):
     rich = await get_pay_photo_attachment(
-        dialog_manager.event.bot, "src/misk/navigation/rich.png"
+        dialog_manager.event.bot, "misk/navigation/rich.png"
     )
     return {"rich": rich}
 
 
 async def get_agutin(dialog_manager: DialogManager, **_):
     agutin = await get_pay_photo_attachment(
-        dialog_manager.event.bot, "src/misk/navigation/agutin.jpg"
+        dialog_manager.event.bot, "misk/navigation/agutin.jpg"
     )
     print(agutin)
     return {"agutin": agutin}
@@ -326,7 +326,7 @@ async def get_agutin(dialog_manager: DialogManager, **_):
 
 async def get_boss(dialog_manager: DialogManager, **_):
     boss = await get_pay_photo_attachment(
-        dialog_manager.event.bot, "src/misk/navigation/boss.jpeg"
+        dialog_manager.event.bot, "misk/navigation/boss.jpeg"
     )
     return {"boss": boss}
 

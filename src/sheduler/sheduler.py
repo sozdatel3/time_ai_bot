@@ -31,7 +31,7 @@ from apscheduler.triggers.interval import IntervalTrigger
 
 #     all_users_ids = await get_all_users_ids()
 #     reminder_photo = await get_pay_photo_attachment(
-#         bot, "src/misk/navigation/every_day.png"
+#         bot, "misk/navigation/every_day.png"
 #     )
 
 #     share_text = """Привет! Хочу индивидуальный прогноз 💫"""

@@ -745,7 +745,7 @@ async def ai_photo_getter(dialog_manager: DialogManager, **kwargs):
     """Getter for AI photo"""
     if dialog_manager.dialog_data.get("ai_pred_photo") is None:
         ai_pred_photo = await get_pay_photo_attachment(
-            dialog_manager.event.bot, "src/misk/navigation/ai_predict.png"
+            dialog_manager.event.bot, "misk/navigation/ai_predict.png"
         )
         dialog_manager.dialog_data["ai_pred_photo"] = ai_pred_photo
     else:

@@ -235,7 +235,7 @@ async def _create_or_get_media(
 async def create_hello_mes(
     bot: Bot,
     forse: bool = False,
-    name: str = "src/misk/hello.ogg",
+    name: str = "misk/hello.ogg",
     is_pdf: bool = False,
     is_video_note: bool = False,
     is_edu: bool = False,
@@ -268,8 +268,8 @@ async def create_hello_mes(
 async def create_hello_mes_old(
     bot: Bot,
     forse=False,
-    mes_name: str = "src/misk/usefull/ЭФИР 1 │ DESENKO.mp3",
-    filename: str = "src/misk/usefull/ЭФИР 1 │ DESENKO.mp3",
+    mes_name: str = "misk/usefull/ЭФИР 1 │ DESENKO.mp3",
+    filename: str = "misk/usefull/ЭФИР 1 │ DESENKO.mp3",
     caption: str = "<i>🎙️Практика получения ресурсов от родителей и Рода.</i>",
 ):
     async with AsyncSessionLocal() as session:
@@ -313,7 +313,7 @@ async def create_hello_mes_old(
 async def create_edu_mes(
     bot: Bot,
     forse: bool = False,
-    name: str = "src/misk/hello.ogg",
+    name: str = "misk/hello.ogg",
     filename: str = "Введение в моё обучение.mp3",
 ) -> Tuple[Optional[str], Optional[str]]:
     """Создать или получить образовательное сообщение"""
@@ -344,7 +344,7 @@ async def create_edu_mes(
 async def create_pay_photo(
     bot: Bot,
     forse: bool = False,
-    name: str = "src/misk/pay_photo.jpg",
+    name: str = "misk/pay_photo.jpg",
     is_gif: bool = False,
 ) -> Tuple[Optional[str], Optional[str]]:
     """Создать или получить платёжное фото"""
@@ -392,7 +392,7 @@ async def create_education_audio(
     bot: Bot, animal: str, forse: bool = False, as_file: bool = False
 ) -> Tuple[Optional[str], Optional[str]]:
     """Создать или получить образовательное аудио"""
-    file_path = f"src/misk/education/{animal}"
+    file_path = f"misk/education/{animal}"
     media_type = MediaType.AUDIO if as_file else MediaType.VOICE
     filename = "Введение в моё обучение.ogg" if as_file else None
 
