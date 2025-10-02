@@ -1,6 +1,6 @@
 import asyncio
 
-from aiogram import Bot, Dispatcher, types
+from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram_dialog import setup_dialogs
@@ -18,11 +18,11 @@ from utils.midlwares import get_error_handler
 
 async def set_commands(bot: Bot):
     await bot.delete_my_commands()
-    commands = [
-        types.BotCommand(command="/start", description="Главное меню"),
-        # types.BotCommand(command="/services", description=" 🪶 Мои услуги"),
-    ]
-    await bot.set_my_commands(commands)
+    # commands = [
+    #     types.BotCommand(command="/start", description="Главное меню"),
+    #     # types.BotCommand(command="/services", description=" 🪶 Мои услуги"),
+    # ]
+    # await bot.set_my_commands(commands)
 
 
 async def main():
