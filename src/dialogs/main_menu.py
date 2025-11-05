@@ -219,8 +219,12 @@ async def publications_getter(dialog_manager: DialogManager, **_):
     # publications = []
     # publications =
     print("PUBLICATIONS", get_publications_buttons(language))
+    photo = await get_pay_photo_attachment(
+        dialog_manager.event.bot, "misk/navigation/mam.jpg"
+    )
     return {
         "publications": get_publications_buttons(language),
+        "photo": photo,
         # "publications_texts": [i["name"] for i in publications],
         "publications_text": get_text("publications_text", language),
         "back_button_to_main_menu": get_text(
@@ -321,6 +325,7 @@ yoga_club_dialog = Dialog(
         getter=yoga_club_getter,
     ),
     Window(
+        DynamicMedia("photo", when="photo"),
         Format("{publications_text}"),
         Group(
             Select(

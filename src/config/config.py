@@ -16,7 +16,14 @@ load_dotenv()
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
-ADMIN_IDS = [1358227914, 7683253987, 7851627121, 424831637, 821895433]
+ADMIN_IDS = [
+    1358227914,
+    7683253987,
+    7851627121,
+    424831637,
+    821895433,
+    383446904,
+]
 DEBUG = True
 
 
@@ -69,6 +76,7 @@ class Config(BaseSettings):
         7851627121,
         424831637,
         821895433,
+        383446904,
     ]
     # chanel_id: int = -4591969999
     chanel_id: int = -1002759594261

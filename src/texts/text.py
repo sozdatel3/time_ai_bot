@@ -21,7 +21,17 @@ TEXTS = {
         "main_menu_title": publications.PUBLICATION_1["en"],
         "publications_button": """Important: articles and publications""",
         # "publications_text": """ТЕКСТ ПУБЛИКАЦИЙ""",
-        "publications_text": """<b>On What Matters:</b> <i><u>Articles &amp; Publications.</u></i>""",
+        "publications_text": """<i>Greetings!
+
+My name is Zhanna Vidmayer, and I am the author and visionary behind the «Time AI — Universe of Creativity» project.
+
+Our project is created specifically for architects and designers who seek not just tools, but innovative solutions to bring the boldest ideas in interior design to life.
+
+With Time AI, you gain access to cutting-edge generative design technologies and neural network tools. These solutions help realize the trends of the future: biophilic design, Japanese minimalism and craft, retro-fusion with a modern accent, the atmosphere of dopamine interiors, as well as flexible personalization and current design trends.
+
+We share and support your aspiration to create unique spaces, combining technology and artistic approach in the rhythm of time.
+
+Welcome to Time AI — a space where next-generation design is born!</i>""",
         "back_button_to_main_menu": """Back""",
         "back_button_to_publications": """Back""",
         "publication_1_button": "Creativity without borders",
@@ -38,7 +48,17 @@ TEXTS = {
     "ru": {
         "main_menu_title": publications.PUBLICATION_1["ru"],
         "publications_button": """О важном: статьи и публикации""",
-        "publications_text": """<b>О важном:</b><i> </i><i><u>статьи и публикации.</u></i>""",
+        "publications_text": """<i>Приветствую вас!
+
+Меня зовут Жанна Видмайер, я автор и вдохновитель проекта «Time AI — Вселенная креатива».
+
+Наш проект создан специально для архитекторов и дизайнеров, которые ищут не просто инструменты, а инновационные решения для воплощения самых смелых идей в интерьерном дизайне.
+
+С Time AI вы получаете доступ к передовым технологиям генеративного дизайна и нейросетевым инструментам. Эти решения помогут реализовать тренды будущего: биофильный дизайн, японский минимализм и крафт, ретро-фьюжн с современным акцентом, атмосферу дофаминового интерьера, а также гибкую персонализацию и актуальные тенденции дизайна.
+
+Мы разделяем и поддерживаем ваше стремление создавать уникальные пространства, сочетая технологию и художественный подход в ритме времени.
+
+Добро пожаловать в Time AI — пространство, где рождается дизайн нового поколения!</i>""",
         "back_button_to_main_menu": """Вернуться назад""",
         "back_button_to_publications": """Вернуться назад""",
         "publication_1_button": "Творчество без границ",
