@@ -220,7 +220,7 @@ async def publications_getter(dialog_manager: DialogManager, **_):
     # publications =
     print("PUBLICATIONS", get_publications_buttons(language))
     photo = await get_pay_photo_attachment(
-        dialog_manager.event.bot, "misk/navigation/mam.jpg"
+        dialog_manager.event.bot, "misk/navigation/mam.png"
     )
     return {
         "publications": get_publications_buttons(language),
