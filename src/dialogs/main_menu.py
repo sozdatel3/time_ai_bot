@@ -21,7 +21,11 @@ from config.config import ADMIN_IDS, get_config
 from db.models.asto_info import get_astro_info
 from db.models.old_workflow.big_mes import get_pay_photo_attachment
 from db.models.user import get_user, get_user_language, set_language
-from texts.text import get_publications_buttons, get_text
+from texts.text import (
+    get_publication_photo,
+    get_publications_buttons,
+    get_text,
+)
 from utils.telethon_status import send_playing_action
 
 from .states import (
@@ -240,12 +244,14 @@ async def publication_selected_getter(dialog_manager: DialogManager, **_):
     )
     id = dialog_manager.dialog_data.get("selected_publication_id")
     new_id = id.split("_")[1]
+    photo = await get_publication_photo(new_id, dialog_manager.event.bot)
     print("ID", id)
     publication_text = get_text(f"publication_{new_id}_text", language)
 
     print("PUBLICATION TEXT", publication_text)
 
     return {
+        "photo": photo,
         "publication_text": publication_text,
         "back_button_to_publications": get_text(
             "back_button_to_publications", language
@@ -348,6 +354,7 @@ yoga_club_dialog = Dialog(
         getter=publications_getter,
     ),
     Window(
+        DynamicMedia("photo", when="photo"),
         Format("{publication_text}"),
         Button(
             Format("{back_button_to_publications}"),
