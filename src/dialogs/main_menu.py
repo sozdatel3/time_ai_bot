@@ -244,16 +244,18 @@ async def publication_selected_getter(dialog_manager: DialogManager, **_):
     id = dialog_manager.dialog_data.get("selected_publication_id")
     new_id = id.split("_")[1]
     new_id_minus_one = int(new_id) - 1
-    photo = await get_pay_photo_attachment(
+    print("NEW ID MINUS ONE", new_id_minus_one)
+    photo_pub = await get_pay_photo_attachment(
         dialog_manager.event.bot, f"misk/publication/{new_id_minus_one}.png"
     )
+    print("PHOTO", photo_pub)
     print("ID", id)
     publication_text = get_text(f"publication_{new_id}_text", language)
 
     # print("PUBLICATION TEXT", publication_text)
 
     return {
-        "photo": photo,
+        "photo_pub": photo_pub,
         "publication_text": publication_text,
         "back_button_to_publications": get_text(
             "back_button_to_publications", language
@@ -356,7 +358,7 @@ yoga_club_dialog = Dialog(
         getter=publications_getter,
     ),
     Window(
-        DynamicMedia("photo", when="photo"),
+        DynamicMedia("photo_pub", when="photo_pub"),
         Format("{publication_text}"),
         Button(
             Format("{back_button_to_publications}"),
