@@ -1,6 +1,3 @@
-from aiogram import Bot
-
-from db.models.old_workflow.big_mes import get_pay_photo_attachment
 from texts import publications
 
 """
@@ -78,9 +75,9 @@ Welcome to Time AI — a space where next-generation design is born!</i>""",
 }
 
 
-async def get_publication_photo(id: str, bot: Bot):
-    print(f"!!!!misk/publication/{id}.png")
-    return await get_pay_photo_attachment(bot, f"misk/publication/{id}.png")
+# async def get_publication_photo(id: str, bot: Bot):
+#     print(f"!!!!misk/publication/{id}.png")
+#     return
 
 
 def get_text(
