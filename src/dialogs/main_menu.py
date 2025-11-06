@@ -243,10 +243,10 @@ async def publication_selected_getter(dialog_manager: DialogManager, **_):
     )
     id = dialog_manager.dialog_data.get("selected_publication_id")
     new_id = id.split("_")[1]
-    new_id_minus_one = int(new_id) - 1
-    print("NEW ID MINUS ONE", new_id_minus_one)
+    # new_id_minus_one = int(new_id) - 1
+    # print("NEW ID MINUS ONE", new_id_minus_one)
     photo_pub = await get_pay_photo_attachment(
-        dialog_manager.event.bot, f"misk/publication/{new_id_minus_one}.png"
+        dialog_manager.event.bot, f"misk/publication/{new_id}.png"
     )
     print("PHOTO", photo_pub)
     print("ID", id)

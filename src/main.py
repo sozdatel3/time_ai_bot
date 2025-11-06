@@ -7,16 +7,22 @@ from aiogram_dialog import setup_dialogs
 
 from config.config import load_config
 from db.models.__init__ import init_db
+from db.models.old_workflow.big_mes import get_pay_photo_attachment
 from dialogs import register_dialogs
 from handlers.payment_handler import PaymentHandler
 from manager.spam_service import SpamManager
 from sheduler.sheduler import setup_scheduler
-from utils.api import init_api
 from utils.astro_manager import AstroManager
 from utils.midlwares import get_error_handler
 
 
 async def set_commands(bot: Bot):
+    await get_pay_photo_attachment(bot, "misk/navigation/main.png")
+    await get_pay_photo_attachment(bot, "misk/publication/1.png")
+    await get_pay_photo_attachment(bot, "misk/publication/2.png")
+    await get_pay_photo_attachment(bot, "misk/publication/3.png")
+    await get_pay_photo_attachment(bot, "misk/publication/4.png")
+
     await bot.delete_my_commands()
     # commands = [
     #     types.BotCommand(command="/start", description="Главное меню"),
@@ -51,10 +57,10 @@ async def main():
     config.set_openai_client()
 
     # Инициализация API
-    api = init_api(config)
-    await api.initialize()
-    api_token = await api.send_bot_info()
-    config.set_bot_token(api_token["token"])
+    # api = init_api(config)
+    # await api.initialize()
+    # api_token = await api.send_bot_info()
+    # config.set_bot_token(api_token["token"])
 
     # Инициализация базы данных
     await init_db()
