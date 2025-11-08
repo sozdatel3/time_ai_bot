@@ -196,28 +196,28 @@ PUBLICATION_5 = {
 <b>Сквозь призму искусства.</b>
 <i><u>Интерьер как отражение идей Пабло Пикассо.</u></i>
 
-<i>Мы все черпаем вдохновение из творчества великих мастеров — художников ранних эпох и современников, дизайнеров интерьеров, архитекторов и деятелей искусства, чьи идеи формируют и переосмысливают эстетические грани мира вокруг нас.
-У каждого из нас есть свои неповторимые стилистические предпочтения и мечта — прикоснуться к величию творчества гениев, стать соучастником процесса, наполненного философией и харизмой автора.
+Мы все черпаем вдохновение из творчества великих мастеров — художников ранних эпох и современников, дизайнеров интерьеров, архитекторов и деятелей искусства, чьи идеи формируют и переосмысливают эстетические грани мира вокруг нас.
 
+У каждого из нас есть свои неповторимые стилистические предпочтения и мечта — прикоснуться к величию творчества гениев, стать соучастником процесса, наполненного философией и харизмой автора.
 Сегодня мы предлагаем взглянуть на современный интерьер сквозь призму Пабло Пикассо — основоположника кубизма, искусства, которое ломает классические рамки и создаёт новый язык форм и пространства.
 
 Кубизм Пикассо — это игра с геометрией и абстракцией, где фасеты и грани раскрывают предметы с нескольких сторон одновременно, позволяя взглянуть на привычное пространство совершенно иначе. 
-Мы приглашаем вас погрузиться в мир креатива, где визуальные формы переплетаются с эмоциями, а пространство становится холстом для бесконечного творчества.
 
-С TimeAI всё очень просто — по-настоящему творчески и креативно!</i>
+Мы приглашаем вас погрузиться в мир креатива.
+С TimeAI всё очень просто — по-настоящему творчески и креативно!
 """,
     "en": """
 <b>Through the Prism of Art.</b>
 <i><u>Interiors as a reflection of Pablo Picasso's ideas.</u></i>
 
-<i>We all draw inspiration from the works of great masters — artists of early eras and contemporaries, interior designers, architects, and art figures whose ideas shape and reimagine the aesthetic facets of the world around us.
-Each of us has our own unique stylistic preferences and a dream — to touch the greatness of genius creativity, to become a participant in a process filled with the philosophy and charisma of the author.
+We all draw inspiration from the works of great masters — artists of early eras and contemporaries, interior designers, architects, and art figures whose ideas shape and reimagine the aesthetic facets of the world around us.
 
+Each of us has our own unique stylistic preferences and a dream — to touch the greatness of genius creativity, to become a participant in a process filled with the philosophy and charisma of the author.
 Today we invite you to look at modern interiors through the prism of Pablo Picasso — the founder of Cubism, an art that breaks classical frameworks and creates a new language of forms and space.
 
 Picasso's Cubism is a play with geometry and abstraction, where facets and edges reveal objects from multiple sides simultaneously, allowing us to look at familiar space in a completely different way.
-We invite you to immerse yourself in a world of creativity, where visual forms intertwine with emotions, and space becomes a canvas for endless creativity.
 
-With TimeAI, everything is very simple — truly creative and innovative!</i>
+We invite you to immerse yourself in a world of creativity.
+With TimeAI, everything is very simple — truly creative and innovative!
 """,
 }
