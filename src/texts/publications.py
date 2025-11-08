@@ -38,7 +38,7 @@ PUBLICATION_2 = {
 <b>Творчество без границ.</b>
 <i><u>AI и дизайн: простые шаги к большим открытиям.</u></i>
 
-<i>На самом деле всё очень просто!
+На самом деле всё очень просто!
 
 Мы планируем заниматься безграничным творчеством, снижая ваши временные и энергетические затраты на рутинную работу, максимально наслаждаясь и растворяясь в самом процессе создания.
 
@@ -46,13 +46,13 @@ PUBLICATION_2 = {
 
 Архитекторы, дизайнеры интерьеров и все представители творческих визуальных профессий, приглашаем вас погрузиться с нами в этот невероятно глубокий и безграничный мир творческого вдохновения и возможностей AI!
 
-Переходим от слов к делу: один простой prompt — и перед вами результат, который не просто превосходит ожидания, а полностью переворачивает представление о возможностях творчества с AI!</i>
+Переходим от слов к делу: один простой prompt — и перед вами результат, который не просто превосходит ожидания, а полностью переворачивает представление о возможностях творчества с AI!
 """,
     "en": """
     <b>Creativity Without Borders.</b>
 <i><u>AI and design: simple steps to big discoveries.</u></i>
 
-<i>In fact, it's all very simple!
+In fact, it's all very simple!
 
 We plan to engage in boundless creativity, reducing your time and energy spent on routine work, while maximizing enjoyment and immersion in the very process of creation.
 
@@ -60,7 +60,7 @@ Together, we will bring the most creative ideas to life — participating in a u
 
 Architects, interior designers, and all representatives of creative visual professions, we invite you to immerse yourself with us in this incredibly deep and limitless world of creative inspiration and AI possibilities!
 
-Let's move from words to action: one simple prompt — and before you is a result that not only exceeds expectations but completely transforms your understanding of the possibilities of creativity with AI!</i>
+Let's move from words to action: one simple prompt — and before you is a result that not only exceeds expectations but completely transforms your understanding of the possibilities of creativity with AI!
 """,
 }
 # <b>Важность нюансов.
@@ -91,7 +91,7 @@ PUBLICATION_3 = {
 <b>Важность нюансов.</b>
 <i><u>AI в деталях: когда мелочи определяют результат.</u></i>
 
-<i>Концепция готова.
+Концепция готова.
 Казалось бы, всё просто. Но…
 
 Творческий процесс — это безграничное и прекрасное явление, как сама Вселенная!
@@ -106,13 +106,13 @@ PUBLICATION_3 = {
 Именно в этом творческом поиске и экспериментах кроется суть процесса и получение желаемого результата!
 
 Для таких творческих экспериментов у нас есть эффективное и простое решение.
-Можно продолжать и продолжать…</i>
+Можно продолжать и продолжать…
 """,
     "en": """
 <b>The Importance of Nuances.</b>
 <i><u>AI in the details: when small things define the result.</u></i>
 
-<i>The concept is ready.
+The concept is ready.
 It would seem everything is simple. But…
 
 The creative process is a boundless and beautiful phenomenon, like the Universe itself!
@@ -127,7 +127,7 @@ The color change shifts the mood — and immediately we notice some detail that 
 It is precisely in this creative search and experimentation that the essence of the process and achieving the desired result lies!
 
 For such creative experiments, we have an effective and simple solution.
-We could go on and on…</i>
+We could go on and on…
 """,
 }
 
@@ -149,7 +149,7 @@ PUBLICATION_4 = {
 <b>Живой штрих с AI.</b>
 <i><u>Когда интерьер оживает и начинает дышать.</u></i>
 
-<i>С нами дизайн интерьера перестаёт быть статичным изображением и превращается в живое искусство, способное передавать настроение и наполнять пространство жизнью — той самой, в которую мы погружаемся сами и приглашаем заказчика.
+С нами дизайн интерьера перестаёт быть статичным изображением и превращается в живое искусство, способное передавать настроение и наполнять пространство жизнью — той самой, в которую мы погружаемся сами и приглашаем заказчика.
 С помощью AI мы вносим в визуализации динамику и движение, открывая новое прочтение интерьера и архитектуры.
 
 • Представьте просторную и светлую гостиную, где на высоких панорамных окнах лёгкий ветер колышет тюль… Он мягко движется, словно дыхание самого ветра проникает в пространство...
@@ -158,13 +158,13 @@ PUBLICATION_4 = {
 Бесконечное количество эмоций…
 И вот мы безоговорочно вовлекаемся в это «живое» пространство.
 
-Искусство дизайна интерьера — это искусство жить!</i>
+Искусство дизайна интерьера — это искусство жить!
 """,
     "en": """
 <b>A Living Touch with AI.</b>
 <i><u>When interiors come alive and begin to breathe.</u></i>
 
-<i>With us, interior design stops being a static image and becomes living art — capable of conveying mood and filling a space with life, the very life we immerse ourselves in and invite the client to share.
+With us, interior design stops being a static image and becomes living art — capable of conveying mood and filling a space with life, the very life we immerse ourselves in and invite the client to share.
 Through AI, we bring movement and dynamics into visualizations, opening up a new interpretation of interior and architecture.
 
 • Imagine a spacious, light-filled living room where a gentle breeze stirs the sheer curtains on tall panoramic windows... They move softly, as if the breath of the wind itself is entering the space...
@@ -173,7 +173,7 @@ Through AI, we bring movement and dynamics into visualizations, opening up a new
 An infinite number of emotions…
 And suddenly, we are completely drawn into this «living» space.
 
-The art of interior design is the art of living!</i>
+The art of interior design is the art of living!
 """,
 }
 
@@ -212,7 +212,6 @@ PUBLICATION_5 = {
 
 We all draw inspiration from the works of great masters — artists of early eras and contemporaries, interior designers, architects, and art figures whose ideas shape and reimagine the aesthetic facets of the world around us.
 
-Each of us has our own unique stylistic preferences and a dream — to touch the greatness of genius creativity, to become a participant in a process filled with the philosophy and charisma of the author.
 Today we invite you to look at modern interiors through the prism of Pablo Picasso — the founder of Cubism, an art that breaks classical frameworks and creates a new language of forms and space.
 
 Picasso's Cubism is a play with geometry and abstraction, where facets and edges reveal objects from multiple sides simultaneously, allowing us to look at familiar space in a completely different way.

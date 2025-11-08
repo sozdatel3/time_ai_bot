@@ -237,7 +237,7 @@ async def publications_getter(dialog_manager: DialogManager, **_):
 
 
 async def publication_selected_getter(dialog_manager: DialogManager, **_):
-    print("\n\nPUBLICATION SELECTED GETTER\n\n")
+    # print("\n\nPUBLICATION SELECTED GETTER\n\n")
     language = (
         await get_user_language(dialog_manager.event.from_user.id) or "ru"
     )
