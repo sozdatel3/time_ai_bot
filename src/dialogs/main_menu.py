@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from aiogram import Bot, F
 from aiogram.types import CallbackQuery
 from aiogram_dialog import (
@@ -42,7 +44,13 @@ async def yoga_club_getter(dialog_manager: DialogManager, **_):
 
         if dialog_manager.dialog_data.get("main_photo") is None:
             main_photo = await get_pay_photo_attachment(
-                bot, "misk/navigation/main.png"
+                bot,
+                str(
+                    Path(__file__).resolve().parent.parent
+                    / "misk"
+                    / "navigation"
+                    / "main.png"
+                ),
             )
             dialog_manager.dialog_data["main_photo"] = main_photo
         else:
@@ -223,7 +231,13 @@ async def publications_getter(dialog_manager: DialogManager, **_):
     # publications =
     print("PUBLICATIONS", get_publications_buttons(language))
     photo = await get_pay_photo_attachment(
-        dialog_manager.event.bot, "misk/navigation/mam.png"
+        dialog_manager.event.bot,
+        str(
+            Path(__file__).resolve().parent.parent
+            / "misk"
+            / "navigation"
+            / "mam.png"
+        ),
     )
     return {
         "publications": get_publications_buttons(language),
@@ -246,7 +260,13 @@ async def publication_selected_getter(dialog_manager: DialogManager, **_):
     # new_id_minus_one = int(new_id) - 1
     # print("NEW ID MINUS ONE", new_id_minus_one)
     photo_pub = await get_pay_photo_attachment(
-        dialog_manager.event.bot, f"misk/publication/{new_id}.png"
+        dialog_manager.event.bot,
+        str(
+            Path(__file__).resolve().parent.parent
+            / "misk"
+            / "publication"
+            / f"{new_id}.png"
+        ),
     )
     # print("PHOTO", photo_pub)
     print("ID", id)

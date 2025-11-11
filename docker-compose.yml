@@ -9,7 +9,7 @@ services:
     environment:
       - TZ=${TZ:-UTC}
       - DB__URL=${DB__URL:-sqlite+aiosqlite:////app/data/bot.db}
-      - WEBHOOK_URL=${WEBHOOK_URL:-https://time.souldev.site}
+      - WEBHOOK_URL=${WEBHOOK_URL:-https://time.souldev.site/webhook}
     ports:
       - "127.0.0.1:8016:8000"
     volumes:

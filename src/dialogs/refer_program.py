@@ -1,4 +1,5 @@
 import urllib.parse
+from pathlib import Path
 
 from aiogram.types import CallbackQuery
 from aiogram_dialog import Dialog, DialogManager, StartMode, Window
@@ -72,7 +73,12 @@ async def get_refer_program_balance(dialog_manager: DialogManager, **kwargs):
     try:
         refer_photo = await get_pay_photo_attachment(
             dialog_manager.event.bot,
-            "misk/navigation/refer.png",
+            str(
+                Path(__file__).resolve().parent.parent
+                / "misk"
+                / "navigation"
+                / "refer.png"
+            ),
         )
         result["ref_program_photo"] = refer_photo
     except Exception as e:

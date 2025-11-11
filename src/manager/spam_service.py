@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from aiogram import Bot
 from aiogram.types import (
     FSInputFile,
@@ -537,7 +539,13 @@ class SpamManager:
                 try:
                     # Используем FSInputFile для отправки файла
                     print("TYPE OF SPAM", type_of_spam)
-                    photo = FSInputFile(photo_path)
+                    base_dir = Path(__file__).resolve().parent.parent
+                    abs_path = (
+                        photo_path
+                        if Path(photo_path).is_absolute()
+                        else str(base_dir / photo_path)
+                    )
+                    photo = FSInputFile(abs_path)
                     await self.bot.send_photo(
                         user_id,
                         photo=photo,

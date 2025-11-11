@@ -2,6 +2,7 @@ import asyncio
 import logging
 import os
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 import uvicorn
 from aiogram import Bot, Dispatcher, types
@@ -28,11 +29,22 @@ scheduler = None
 
 async def set_commands(bot: Bot):
     # Preload media to cache file_ids inside Telegram
-    await get_pay_photo_attachment(bot, "src/misk/navigation/main.png")
-    await get_pay_photo_attachment(bot, "src/misk/publication/1.png")
-    await get_pay_photo_attachment(bot, "src/misk/publication/2.png")
-    await get_pay_photo_attachment(bot, "src/misk/publication/3.png")
-    await get_pay_photo_attachment(bot, "src/misk/publication/4.png")
+    base_dir = Path(__file__).resolve().parent
+    await get_pay_photo_attachment(
+        bot, str(base_dir / "misk" / "navigation" / "main.png")
+    )
+    await get_pay_photo_attachment(
+        bot, str(base_dir / "misk" / "publication" / "1.png")
+    )
+    await get_pay_photo_attachment(
+        bot, str(base_dir / "misk" / "publication" / "2.png")
+    )
+    await get_pay_photo_attachment(
+        bot, str(base_dir / "misk" / "publication" / "3.png")
+    )
+    await get_pay_photo_attachment(
+        bot, str(base_dir / "misk" / "publication" / "4.png")
+    )
 
     try:
         await bot.delete_my_commands()

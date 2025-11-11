@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from aiogram import F
 from aiogram.types import CallbackQuery
 from aiogram_dialog import (
@@ -79,14 +81,26 @@ async def about_me_getter(dialog_manager: DialogManager, **_):
     has_previous_page = current_page > 0
     if dialog_manager.dialog_data.get("about_me_photo") is None:
         about_me_photo = await get_pay_photo_attachment(
-            dialog_manager.event.bot, "misk/navigation/about.png"
+            dialog_manager.event.bot,
+            str(
+                Path(__file__).resolve().parent.parent
+                / "misk"
+                / "navigation"
+                / "about.png"
+            ),
         )
         dialog_manager.dialog_data["about_me_photo"] = about_me_photo
     else:
         about_me_photo = dialog_manager.dialog_data.get("about_me_photo")
     if dialog_manager.dialog_data.get("about_me_photo2") is None:
         about_me_photo2 = await get_pay_photo_attachment(
-            dialog_manager.event.bot, "misk/navigation/about2.png"
+            dialog_manager.event.bot,
+            str(
+                Path(__file__).resolve().parent.parent
+                / "misk"
+                / "navigation"
+                / "about2.png"
+            ),
         )
         dialog_manager.dialog_data["about_me_photo2"] = about_me_photo2
     else:

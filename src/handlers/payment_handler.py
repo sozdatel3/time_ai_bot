@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from aiogram import Bot
 from aiogram.types import (
     FSInputFile,
@@ -115,7 +117,13 @@ class PaymentHandler:
             # Send certificate image first
             await self.bot.send_photo(
                 order.user_id,
-                photo=FSInputFile("misk/sertificate.PNG"),
+                photo=FSInputFile(
+                    str(
+                        Path(__file__).resolve().parent.parent
+                        / "misk"
+                        / "sertificate.PNG"
+                    )
+                ),
                 caption=f"Спасибо за покупку сертификата!\n\nНе переходи по этой ссылке - перешли это сообщение получателю и он получит сууму сертификата на баланс! Вот <a href='{certificate.url}'>ссылка для активации</a>",
             )
         else:
@@ -167,7 +175,14 @@ class PaymentHandler:
     async def _handle_yoga_club_payment(self, order: Order):
         await self.bot.send_photo(
             order.user_id,
-            photo=FSInputFile("misk/spam/subscription_is_active.png"),
+            photo=FSInputFile(
+                str(
+                    Path(__file__).resolve().parent.parent
+                    / "misk"
+                    / "spam"
+                    / "subscription_is_active.png"
+                )
+            ),
             caption="""
 <b><i>Добро пожаловать в круг избранных 🫂</i></b>
 
