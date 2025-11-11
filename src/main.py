@@ -2,6 +2,7 @@ import asyncio
 import logging
 import os
 from contextlib import asynccontextmanager
+from datetime import datetime
 from pathlib import Path
 
 import uvicorn
@@ -174,10 +175,21 @@ async def new_registration(payload: dict):
         language = payload.get("language")
         created_at = payload.get("created_at")
         total_users = payload.get("total")
+        # Parse and format the created_at timestamp
+        try:
+            dt = datetime.fromisoformat(created_at.replace("Z", "+00:00"))
+            created_at = dt.strftime("%d.%m.%Y - %H:%M")
+        except Exception:
+            pass  # Keep original format if parsing fails
         if not email or not language or not created_at:
             return Response(status_code=400)
-        message = f"""на сайте новая регистрация в лист ожидания: 
-            {email}, {language}, {created_at}, всего пользователей сейчас очень сильно ожидают запуска: {total_users}"""
+        message = f"""<b><i>🎉 Новая регистрация в лист ожидания!</i></b>
+
+<b>Email:</b> <code>{email}</code>
+<b>Язык:</b> {language}
+<b>Дата регистрации:</b> {created_at}
+
+<i>Всего пользователей в ожидании запуска:</i> <b>{total_users}</b> 🚀"""
         config = get_config()
         await config.get_admin_notifier(bot)._send_to_admins(message)
         return {"status": "ok"}
