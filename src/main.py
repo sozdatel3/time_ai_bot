@@ -173,12 +173,11 @@ async def new_registration(payload: dict):
         email = payload.get("email")
         language = payload.get("language")
         created_at = payload.get("created_at")
+        total_users = payload.get("total")
         if not email or not language or not created_at:
             return Response(status_code=400)
-        message = (
-            f"на сайте новая регистрация в лист ожидания: "
-            f"{email}, {language}, {created_at}"
-        )
+        message = f"""на сайте новая регистрация в лист ожидания: 
+            {email}, {language}, {created_at}, всего пользователей сейчас очень сильно ожидают запуска: {total_users}"""
         config = get_config()
         await config.get_admin_notifier(bot)._send_to_admins(message)
         return {"status": "ok"}
