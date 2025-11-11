@@ -81,7 +81,7 @@ class Config(BaseSettings):
     # chanel_id: int = -4591969999
     chanel_id: int = -1002759594261
     # chat_admin_ids: list[int] = [-4831020502]
-    chat_admin_ids: list[int] = [-3319704973]
+    chat_admin_ids: list[int] = [-1003319704973]
     # chanel_id: int = -1002507666461
     api_url: str
     oferta_url: str = (
