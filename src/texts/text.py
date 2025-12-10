@@ -58,6 +58,7 @@ The language of his interior is fractured planes, the rhythm of lines, the textu
 As Billy Baldwin, the legendary decorator, said: «The worst thing any decorator can do is give the client the feeling that they are walking through someone else’s house. Interiors should belong to the owner, not be a reflection of the decorator.»"
         """,
         "time_video_button": "Person & Interior",
+        "time_stat_button": "Article on Dsgners",
     },
     "ru": {
         "main_menu_title": publications.PUBLICATION_1["ru"],
@@ -102,6 +103,7 @@ TimeAI переводит человека и его внутренний мир
         # Язык его интерьера — ломаные плоскости, ритм линий, фактура материалов, свет как режиссёр и искусство как точка сборки. В таком пространстве нет «просто дивана» или «просто стены» — есть композиции и плоскости, которые держат напряжение. Поэтому кубизм в интерьере звучит премиально: он формулирует суть.
         # Как сказал Билли Болдуин, легендарный декоратор: «Самое худшее, что любой декоратор может сделать, — это дать клиенту ощущение, что он гуляет в чужом доме. Интерьеры должны принадлежать владельцу, а не быть отражением декоратора».
         "time_video_button": "Человек & Интерьер",
+        "time_stat_button": "Статья на Dsgners",
     },
 }
 

@@ -326,11 +326,13 @@ async def time_video_getter(dialog_manager: DialogManager, **_):
         language,
     )
     back_button_to_main_menu = get_text("back_button_to_main_menu", language)
+    time_stat_button = get_text("time_stat_button", language)
 
     return {
         "time_video_gif": time_video_gif,
         "time_video": time_video,
         "back_button_to_main_menu": back_button_to_main_menu,
+        "time_stat_button": time_stat_button,
     }
 
 
@@ -401,6 +403,13 @@ yoga_club_dialog = Dialog(
     Window(
         DynamicMedia("time_video_gif", when="time_video_gif"),
         Format("{time_video}"),
+        Url(
+            Format("{time_stat_button}"),
+            Format(
+                "https://dsgners.ru/timeaiai/24574-chelovek-interer-v-stile-kubizm"
+            ),
+            id="time_stat_button",
+        ),
         Button(
             Format("{back_button_to_main_menu}"),
             id="back_to_main_menu",
