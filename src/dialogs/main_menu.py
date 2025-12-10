@@ -73,6 +73,8 @@ async def yoga_club_getter(dialog_manager: DialogManager, **_):
             "full_text": "MAIN MENU",
             "publications_button": publications_button,
             "publications_url_text": publications_url_text,
+            "time_video": get_text("time_video", language),
+            "time_video_button": get_text("time_video_button", language),
         }
     except Exception:
         import traceback
@@ -93,6 +95,8 @@ async def yoga_club_getter(dialog_manager: DialogManager, **_):
             "has_previous_page": False,
             "main_photo": main_photo,
             "status_text": "",
+            "time_video": get_text("time_video", "ru"),
+            "time_video_button": get_text("time_video_button", "ru"),
         }
 
 
@@ -295,6 +299,39 @@ async def on_publications_selected(
     )
 
 
+async def on_time_video(
+    c: CallbackQuery, button: Button, manager: DialogManager
+):
+    await manager.switch_to(YogaClubStates.time_video, show_mode=ShowMode.EDIT)
+
+
+async def time_video_getter(dialog_manager: DialogManager, **_):
+
+    language = (
+        await get_user_language(dialog_manager.event.from_user.id) or "ru"
+    )
+    time_video_gif = await get_pay_photo_attachment(
+        dialog_manager.event.bot,
+        str(
+            Path(__file__).resolve().parent.parent
+            / "misk"
+            / "person_interior"
+            / "time.MP4"
+        ),
+        True,
+    )
+
+    time_video = get_text(
+        "time_video",
+        language,
+    )
+
+    return {
+        "time_video_gif": time_video_gif,
+        "time_video": time_video,
+    }
+
+
 yoga_club_dialog = Dialog(
     Window(
         Format(
@@ -316,6 +353,11 @@ yoga_club_dialog = Dialog(
     Window(
         DynamicMedia("main_photo", when="main_photo"),
         Format("{title}"),
+        Button(
+            Format("{time_video_button}"),
+            id="time_video",
+            on_click=on_time_video,
+        ),
         Button(
             Format("{publications_button}"),
             id="publications",
@@ -353,6 +395,17 @@ yoga_club_dialog = Dialog(
         ),
         state=YogaClubStates.main,
         getter=yoga_club_getter,
+    ),
+    Window(
+        DynamicMedia("time_video_gif", when="time_video_gif"),
+        Format("{time_video}"),
+        Button(
+            Format("{back_button_to_main_menu}"),
+            id="back_to_main_menu",
+            on_click=on_main_menu,
+        ),
+        state=YogaClubStates.time_video,
+        getter=time_video_getter,
     ),
     Window(
         DynamicMedia("photo", when="photo"),

@@ -44,6 +44,20 @@ Welcome to Time AI — a space where next-generation design is born!</i>""",
         "publication_4_text": publications.PUBLICATION_5["en"],
         # "publication_5_text": publications.PUBLICATION_5["en"],
         "publications_url_text": "Open Time AI",
+        "time_video": """
+<b>Person & Interior</b> <i><u>in Cubism style.</u></i>
+
+TimeAI is a tool that translates a person and their inner world into the language of space. We choose the protagonist, their rhythm, character, dreams, and facets, and pass all of this through a stylistic code: the neural network becomes not a "replacement" for the designer, but a subtle co-author, assembling personality and home into a unified visual story.
+
+Imagine a man: his home reflects the rational and emotional, the bold and restrained, the modern and rooted in culture.
+
+Person & Interior in "Cubism" style is a personality that cannot be reduced to a single phrase. Cubism shows truth without breaking form: the Cubism-Person consists of facets, angles, and contradictions that change them every second. They think volumetrically, see multiple options at once, gather meaning from details, value structure and honesty.
+
+The language of their interior is broken planes, rhythm of lines, texture of materials, light as director, and art as the assembly point. In such a space, there is no "just a sofa" or "just a wall" — there are compositions and planes that hold tension. That's why cubism in interior sounds premium: it formulates the essence.
+
+As Billy Baldwin, the legendary decorator, said: "The worst thing any decorator can do is give a client the feeling that they are walking around in someone else's home. Interiors should belong to the owner, not be a reflection of the decorator."
+        """,
+        "time_video_button": "Person & Interior",
     },
     "ru": {
         "main_menu_title": publications.PUBLICATION_1["ru"],
@@ -71,6 +85,20 @@ Welcome to Time AI — a space where next-generation design is born!</i>""",
         "publication_4_text": publications.PUBLICATION_5["ru"],
         # "publication_5_text": publications.PUBLICATION_5["ru"],
         "publications_url_text": "Открой Time AI",
+        "time_video": """
+<b>Человек & Интерьер</b> <i><u>в стиле Кубизм.</u></i>
+
+TimeAI — инструмент, который переводит человека и его внутренний мир в язык пространства. Мы выбираем героя, его ритм, характер, мечты и грани и пропускаем всё это через стилевой код: нейросеть становится не «заменой» дизайнера, а тонким соавтором, собирающим личность и дом в единую визуальную историю.
+
+Представим мужчину: его дом отражает рациональное и эмоциональное, смелое и сдержанное, современное и укоренённое в культуре.
+
+Человек & Интерьер в стиле «Кубизм» — это личность, которую нельзя свести к одной фразе. Кубизм показывает правду, не ломая форму: Человек-Кубизм состоит из граней, ракурсов и противоречий, которые меняют его ежесекундно. Он мыслит объёмно, видит несколько вариантов сразу, собирает смысл из деталей, ценит структуру и честность.
+
+Язык его интерьера — ломаные плоскости, ритм линий, фактура материалов, свет как режиссёр и искусство как точка сборки. В таком пространстве нет «просто дивана» или «просто стены» — есть композиции и плоскости, которые держат напряжение. Поэтому кубизм в интерьере звучит премиально: он формулирует суть.
+
+Как сказал Билли Болдуин, легендарный декоратор: «Самое худшее, что любой декоратор может сделать, — это дать клиенту ощущение, что он гуляет в чужом доме. Интерьеры должны принадлежать владельцу, а не быть отражением декоратора».
+        """,
+        "time_video_button": "Человек & Интерьер",
     },
 }
 

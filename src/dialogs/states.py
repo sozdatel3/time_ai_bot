@@ -144,6 +144,7 @@ class YogaClubStates(StatesGroup):
     choose_language = State()
     test_period = State()
     remind_about_opening = State()
+    time_video = State()
 
 
 class PublicationsStates(StatesGroup):
