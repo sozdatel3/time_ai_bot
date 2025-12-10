@@ -325,10 +325,12 @@ async def time_video_getter(dialog_manager: DialogManager, **_):
         "time_video",
         language,
     )
+    back_button_to_main_menu = get_text("back_button_to_main_menu", language)
 
     return {
         "time_video_gif": time_video_gif,
         "time_video": time_video,
+        "back_button_to_main_menu": back_button_to_main_menu,
     }
 
 
