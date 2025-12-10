@@ -32,8 +32,8 @@ With Time AI, you gain access to cutting-edge generative design technologies and
 We share and support your aspiration to create unique spaces, combining technology and artistic approach in the rhythm of time.
 
 Welcome to Time AI — a space where next-generation design is born!</i>""",
-        "back_button_to_main_menu": """Back""",
-        "back_button_to_publications": """Back""",
+        "back_button_to_main_menu": """←""",
+        "back_button_to_publications": """←""",
         "publication_1_button": "Creativity without borders",
         "publication_2_button": "Importance of details",
         "publication_3_button": "Live AI sketch",
@@ -73,8 +73,8 @@ As Billy Baldwin, the legendary decorator, said: «The worst thing any decorator
 Мы разделяем и поддерживаем ваше стремление создавать уникальные пространства, сочетая технологию и художественный подход в ритме времени.
 
 Добро пожаловать в Time AI — пространство, где рождается дизайн нового поколения!</i>""",
-        "back_button_to_main_menu": """Вернуться назад""",
-        "back_button_to_publications": """Вернуться назад""",
+        "back_button_to_main_menu": """←""",
+        "back_button_to_publications": """←""",
         "publication_1_button": "Творчество без границ",
         "publication_2_button": "Важность нюансов",
         "publication_3_button": "Живой штрих с AI",
