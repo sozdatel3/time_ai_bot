@@ -1,6 +1,6 @@
 PUBLICATION_1 = {
     "ru": """
-<b>Time AI </b><i>— </i><i><u>Вселенная креатива.</u></i>
+<b>TimeAI </b><i>— </i><i><u>Вселенная креатива.</u></i>
 
 Мы помогаем находить креативные идеи для визуализаций и расширяем творческие возможности. Наш AI создаёт динамичное, живое искусство на основе новаторских визуальных языков, ускоряя и упрощая работу — как партнёр, а не замена.
 
@@ -9,7 +9,7 @@ PUBLICATION_1 = {
 Мы — команда профессионалов, обладающих глубокими художественными и техническими знаниями, творящих с вдохновением и стремящихся вдохновлять других на творчество во всех его формах и проявлениях!
 """,
     "en": """
-<b>Time AI</b> <i>— </i><i><u>The Universe of Creativity.</u></i>
+<b>TimeAI</b> <i>— </i><i><u>The Universe of Creativity.</u></i>
 
 We help uncover creative ideas for visualizations and expand the boundaries of artistic expression. Our AI generates dynamic, living art based on innovative visual languages, accelerating and simplifying the workflow — acting as a partner, not a replacement.
 
