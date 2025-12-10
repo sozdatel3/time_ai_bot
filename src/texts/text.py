@@ -23,15 +23,15 @@ TEXTS = {
         # "publications_text": """ТЕКСТ ПУБЛИКАЦИЙ""",
         "publications_text": """<i>Greetings!
 
-My name is Zhanna Vidmayer, and I am the author and visionary behind the «Time AI — Universe of Creativity» project.
+My name is Zhanna Vidmayer, and I am the author and visionary behind the «TimeAI — Universe of Creativity» project.
 
 Our project is created specifically for architects and designers who seek not just tools, but innovative solutions to bring the boldest ideas in interior design to life.
 
-With Time AI, you gain access to cutting-edge generative design technologies and neural network tools. These solutions help realize the trends of the future: biophilic design, Japanese minimalism and craft, retro-fusion with a modern accent, the atmosphere of dopamine interiors, as well as flexible personalization and current design trends.
+With TimeAI, you gain access to cutting-edge generative design technologies and neural network tools. These solutions help realize the trends of the future: biophilic design, Japanese minimalism and craft, retro-fusion with a modern accent, the atmosphere of dopamine interiors, as well as flexible personalization and current design trends.
 
 We share and support your aspiration to create unique spaces, combining technology and artistic approach in the rhythm of time.
 
-Welcome to Time AI — a space where next-generation design is born!</i>""",
+Welcome to TimeAI — a space where next-generation design is born!</i>""",
         "back_button_to_main_menu": """←""",
         "back_button_to_publications": """←""",
         "publication_1_button": "Creativity without borders",
@@ -43,19 +43,13 @@ Welcome to Time AI — a space where next-generation design is born!</i>""",
         "publication_3_text": publications.PUBLICATION_4["en"],
         "publication_4_text": publications.PUBLICATION_5["en"],
         # "publication_5_text": publications.PUBLICATION_5["en"],
-        "publications_url_text": "Open Time AI",
+        "publications_url_text": "Open TimeAI",
         "time_video": """
 <b>Human & Interior</b> <i><u>in the style of Cubism.</u></i>
 
-TimeAI is a tool that translates a person and their inner world into the language of space. We start with the protagonist: their rhythm, character, dreams and facets, and pass all of that through a stylistic code. The neural network becomes not a «replacement» for the designer, but a subtle co-author, bringing together the person and the home into a single visual story.
+TimeAI explores how a person’s inner world transforms into a cubist interior. The protagonist, with their own rhythm, character and dreams, becomes the focal point of the space, while the neural network acts as a subtle co-author, bringing together the person and the home into a single visual story.
 
-Imagine a man whose home reflects both the rational and the emotional, the bold and the restrained, the contemporary and the culturally grounded.
-
-Human & Interior in the style of «Cubism» is a personality that cannot be reduced to a single phrase. Cubism reveals the truth without breaking the form: Human-Cubism is made of facets, angles and contradictions that change him every second. He thinks volumetrically, sees several options at once, builds meaning from details and values structure and honesty.
-
-The language of his interior is fractured planes, the rhythm of lines, the texture of materials, light as a director and art as a focal point. In such a space there is no «just a sofa» or «just a wall» – there are compositions and planes that hold tension. That is why Cubism in the interior reads as inherently premium: it formulates the essence.
-
-As Billy Baldwin, the legendary decorator, said: «The worst thing any decorator can do is give the client the feeling that they are walking through someone else’s house. Interiors should belong to the owner, not be a reflection of the decorator.»"
+Here, Cubism is the language of multidimensional thinking: fractured planes, the rhythm of lines, textures and light as a director create a space with no sense of «someone else’s house». The interior genuinely belongs to its owner and articulates their essence."
         """,
         "time_video_button": "Person & Interior",
         "time_stat_button": "Article on Dsgners",
@@ -65,15 +59,15 @@ As Billy Baldwin, the legendary decorator, said: «The worst thing any decorator
         "publications_button": """О важном: статьи и публикации""",
         "publications_text": """<i>Приветствую вас!
 
-Меня зовут Жанна Видмайер, я автор и вдохновитель проекта «Time AI — Вселенная креатива».
+Меня зовут Жанна Видмайер, я автор и вдохновитель проекта «TimeAI — Вселенная креатива».
 
 Наш проект создан специально для архитекторов и дизайнеров, которые ищут не просто инструменты, а инновационные решения для воплощения самых смелых идей в интерьерном дизайне.
 
-С Time AI вы получаете доступ к передовым технологиям генеративного дизайна и нейросетевым инструментам. Эти решения помогут реализовать тренды будущего: биофильный дизайн, японский минимализм и крафт, ретро-фьюжн с современным акцентом, атмосферу дофаминового интерьера, а также гибкую персонализацию и актуальные тенденции дизайна.
+С TimeAI вы получаете доступ к передовым технологиям генеративного дизайна и нейросетевым инструментам. Эти решения помогут реализовать тренды будущего: биофильный дизайн, японский минимализм и крафт, ретро-фьюжн с современным акцентом, атмосферу дофаминового интерьера, а также гибкую персонализацию и актуальные тенденции дизайна.
 
 Мы разделяем и поддерживаем ваше стремление создавать уникальные пространства, сочетая технологию и художественный подход в ритме времени.
 
-Добро пожаловать в Time AI — пространство, где рождается дизайн нового поколения!</i>""",
+Добро пожаловать в TimeAI — пространство, где рождается дизайн нового поколения!</i>""",
         "back_button_to_main_menu": """←""",
         "back_button_to_publications": """←""",
         "publication_1_button": "Творчество без границ",
@@ -85,14 +79,17 @@ As Billy Baldwin, the legendary decorator, said: «The worst thing any decorator
         "publication_3_text": publications.PUBLICATION_4["ru"],
         "publication_4_text": publications.PUBLICATION_5["ru"],
         # "publication_5_text": publications.PUBLICATION_5["ru"],
-        "publications_url_text": "Открой Time AI",
+        "publications_url_text": "Открой TimeAI",
         "time_video": """
 <b>Человек & Интерьер</b> <i><u>в стиле Кубизм.</u></i>
 
+TimeAI исследует, как внутренний мир человека превращается в кубистичный интерьер. Герой со своим ритмом, характером и мечтами становится центром пространства, а нейросеть выступает тонким соавтором, собирающим личность и дом в единую визуальную историю.
+
+Кубизм здесь — язык многогранного мышления: ломаные плоскости, ритм линий, фактуры и свет-режиссёр создают пространство, в котором нет «чужого дома». Интерьер честно принадлежит своему владельцу и формулирует его суть.
 
         """,
         #         TimeAI переводит человека и его внутренний мир в язык пространства. В центре всегда герой: его ритм, характер, мечты и грани, собранные в стилевом коде. Нейросеть здесь не «замена» дизайнера, а соавтор, который помогает соединить личность и дом в единую визуальную историю.
-        # Представим мужчину, чей дом одновременно рационален и эмоционален, смел и сдержан, современен и укоренён в культуре. Человек &amp; Интерьер в стиле «Кубизм» — это многогранная личность: Человек-Кубизм мыслит объёмно, видит несколько вариантов сразу, собирает смысл из деталей и ценит структуру и честность.
+        # Представим мужчину, чей дом одновременно рационален и эмоционален, смел и сдержан, современен и укоренён в культуре. Человек & Интерьер в стиле «Кубизм» — это многогранная личность: Человек-Кубизм мыслит объёмно, видит несколько вариантов сразу, собирает смысл из деталей и ценит структуру и честность.
         # Язык его интерьера — ломаные плоскости, ритм линий, фактура материалов, свет как режиссёр и искусство как точка сборки. Здесь нет «просто дивана» или «просто стены» — есть композиции и плоскости, которые держат напряжение. Поэтому кубизм в интерьере звучит премиально: он формулирует суть.
         # Как сказал Билли Болдуин: «Самое худшее, что любой декоратор может сделать, — это дать клиенту ощущение, что он гуляет в чужом доме. Интерьеры должны принадлежать владельцу, а не быть отражением декоратора».
         # TimeAI — инструмент, который переводит человека и его внутренний мир в язык пространства. Мы выбираем героя, его ритм, характер, мечты и грани и пропускаем всё это через стилевой код: нейросеть становится не «заменой» дизайнера, а тонким соавтором, собирающим личность и дом в единую визуальную историю.
