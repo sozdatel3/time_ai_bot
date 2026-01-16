@@ -53,7 +53,7 @@ PROMPT_2 = {
 
 PROMPT_3 = {
     "ru": """
-<b>Стиль интерьера:</b> <i><u>биофилия 2.0</u></i>
+<b>Стиль интерьера:</b> <i><u>Биофилия 2.0</u></i>
 
 <code>Photorealistic minimalist interior, Biophilia 2.0 — calm, tactile, wellness-oriented. Living moss walls in architectural panels. Warm daylight from large windows and skylights. Materials: light oak, limestone, clay plaster, linen, wool, matte black hardware, warm brass accents. Low, tactile furniture: upholstered sofa, modular cushions, natural textiles. Natural palette: moss green, sage, oat, sand, warm neutrals. Atmosphere of comfort and nature. Real-world scale, clean proportions. Eye level (1.3m), 3/4 view, 35mm lens, photorealistic GI, PBR materials, soft shadows, 8k resolution.</code>
 """,
