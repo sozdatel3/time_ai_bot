@@ -597,7 +597,7 @@ yoga_club_dialog = Dialog(
                 items="prompts",
                 on_click=on_prompt_selected,
             ),
-            width=1,
+            width=2,
         ),
         Button(
             Format("{back_button_to_main_menu}"),
