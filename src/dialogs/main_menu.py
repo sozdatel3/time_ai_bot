@@ -416,10 +416,12 @@ async def prepared_prompts_select_getter(dialog_manager: DialogManager, **_):
         ),
     )
     # prompts = get_prompts_texts(language)
+    print("promm")
     prompts = get_prompts_buttons(language)
-
+    print("promm", prompts)
+    print("prommmmmpts", prepared_prompts)
     return {
-        "prompts": prompts_buttons,
+        "prompts": prompts,
         "prompt_main_text": prepared_prompts,
         "back_button_to_main_menu": back_button_to_main_menu,
         # "prepared_prompts_button": prepared_prompts_button,
