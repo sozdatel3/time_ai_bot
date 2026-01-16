@@ -1,4 +1,5 @@
 from texts import publications
+from texts import prompts
 
 """
 Simple text localization system.
@@ -42,6 +43,18 @@ Welcome to TimeAI — a space where next-generation design is born!</i>""",
         "publication_2_text": publications.PUBLICATION_3["en"],
         "publication_3_text": publications.PUBLICATION_4["en"],
         "publication_4_text": publications.PUBLICATION_5["en"],
+        "prompt_1_button": prompts.ALL_PROMPTS_list_ru[0],
+        "prompt_2_button": prompts.ALL_PROMPTS_list_ru[1],
+        "prompt_3_button": prompts.ALL_PROMPTS_list_ru[2],
+        "prompt_4_button": prompts.ALL_PROMPTS_list_ru[3],
+        "prompt_5_button": prompts.ALL_PROMPTS_list_ru[4],
+        "prompt_6_button": prompts.ALL_PROMPTS_list_ru[5],
+        "prompt_1_text": prompts.PROMPT_1["en"],
+        "prompt_2_text": prompts.PROMPT_2["en"],
+        "prompt_3_text": prompts.PROMPT_3["en"],
+        "prompt_4_text": prompts.PROMPT_4["en"],
+        "prompt_5_text": prompts.PROMPT_5["en"],
+        "prompt_6_text": prompts.PROMPT_6["en"],
         # "publication_5_text": publications.PUBLICATION_5["en"],
         "publications_url_text": "Open TimeAI",
         "time_video": """
@@ -53,8 +66,37 @@ Here, Cubism is the language of multidimensional thinking: fractured planes, the
         """,
         "time_video_button": "Person & Interior",
         "time_stat_button": "Article on Dsgners",
+        "prepared_prompts_button": "Ready to use prompts 2026",
+        "prompt_main_text": """<b>Ready-to-use prompts 2026:</b> <i><u>trending interior styles without any prompt engineering skills.</u></i>
+
+Hey everyone!
+
+We're excited to share some inspiration and exclusive prompts for instant generation of trending interiors: soft minimalism, art deco, biophilia 2.0, japandi, plus unique RU-CN fusion styles from TimeAI!
+
+AI creates harmonious spaces through the lens of "Human & Interior" philosophy — tailored to your personality and needs, in just seconds.
+
+Save hours on routine work — boost your creativity!
+
+Subscribe to timeai.ai — get free access to generations first!
+
+Share your style ideas — we'll create a custom prompt for you!""",
+        "back_button_to_prompts": """←""",
     },
     "ru": {
+        "prepared_prompts_button": "Готовые промпты 2026",
+        "prompt_main_text": """<b>Готовые промпты 2026:</b> <i><u>трендовые стили интерьера без навыков prompt engineering.</u></i>
+
+Друзья!
+
+Спешим поделиться вдохновением и эксклюзивными промптами для мгновенной генерации трендовых интерьеров: мягкий минимализм, арт-деко, биофилия 2.0, джапанди, а также уникальные RU-CN фьюжн-стили от TimeAI!
+
+AI создаёт гармоничные пространства через призму философии «Человек & Интерьер» — под ваш характер и запрос, за секунды.
+
+Экономьте часы на рутине — усиливайте креатив!
+
+Подписывайтесь на timeai.ai — получите бесплатный доступ к генерациям первыми!
+
+Делитесь идеями стилей — сделаем персональный промпт!""",
         "main_menu_title": publications.PUBLICATION_1["ru"],
         "publications_button": """О важном: статьи и публикации""",
         "publications_text": """<i>Приветствую вас!
@@ -70,10 +112,23 @@ Here, Cubism is the language of multidimensional thinking: fractured planes, the
 Добро пожаловать в TimeAI — пространство, где рождается дизайн нового поколения!</i>""",
         "back_button_to_main_menu": """←""",
         "back_button_to_publications": """←""",
+        "back_button_to_prompts": """←""",
         "publication_1_button": "Творчество без границ",
         "publication_2_button": "Важность нюансов",
         "publication_3_button": "Живой штрих с AI",
         "publication_4_button": "Сквозь призму искусства",
+        "prompt_1_button": prompts.ALL_PROMPTS_list_ru[0],
+        "prompt_2_button": prompts.ALL_PROMPTS_list_ru[1],
+        "prompt_3_button": prompts.ALL_PROMPTS_list_ru[2],
+        "prompt_4_button": prompts.ALL_PROMPTS_list_ru[3],
+        "prompt_5_button": prompts.ALL_PROMPTS_list_ru[4],
+        "prompt_6_button": prompts.ALL_PROMPTS_list_ru[5],
+        "prompt_1_text": prompts.PROMPT_1["ru"],
+        "prompt_2_text": prompts.PROMPT_2["ru"],
+        "prompt_3_text": prompts.PROMPT_3["ru"],
+        "prompt_4_text": prompts.PROMPT_4["ru"],
+        "prompt_5_text": prompts.PROMPT_5["ru"],
+        "prompt_6_text": prompts.PROMPT_6["ru"],
         "publication_1_text": publications.PUBLICATION_2["ru"],
         "publication_2_text": publications.PUBLICATION_3["ru"],
         "publication_3_text": publications.PUBLICATION_4["ru"],
@@ -189,5 +244,63 @@ def get_publications_texts(language: str = DEFAULT_LANGUAGE):
         {
             "id": "publication_5_text",
             "name": publications.PUBLICATION_5[language],
+        },
+    ]
+
+
+def get_prompts_buttons(language: str = DEFAULT_LANGUAGE):
+    return [
+        {
+            "id": "prompt_1_button",
+            "name": get_text("prompt_1_button", language),
+        },
+        {
+            "id": "prompt_2_button",
+            "name": get_text("prompt_2_button", language),
+        },
+        {
+            "id": "prompt_3_button",
+            "name": get_text("prompt_3_button", language),
+        },
+        {
+            "id": "prompt_4_button",
+            "name": get_text("prompt_4_button", language),
+        },
+        {
+            "id": "prompt_5_button",
+            "name": get_text("prompt_5_button", language),
+        },
+        {
+            "id": "prompt_6_button",
+            "name": get_text("prompt_6_button", language),
+        },
+    ]
+
+
+def get_prompts_texts(language: str = DEFAULT_LANGUAGE):
+    return [
+        {
+            "id": "prompt_1_text",
+            "name": prompts.PROMPT_1[language],
+        },
+        {
+            "id": "prompt_2_text",
+            "name": prompts.PROMPT_2[language],
+        },
+        {
+            "id": "prompt_3_text",
+            "name": prompts.PROMPT_3[language],
+        },
+        {
+            "id": "prompt_4_text",
+            "name": prompts.PROMPT_4[language],
+        },
+        {
+            "id": "prompt_5_text",
+            "name": prompts.PROMPT_5[language],
+        },
+        {
+            "id": "prompt_6_text",
+            "name": prompts.PROMPT_6[language],
         },
     ]

@@ -26,6 +26,8 @@ from db.models.user import get_user, get_user_language, set_language
 from texts.text import (
     get_publications_buttons,
     get_text,
+    get_prompts_texts,
+    get_prompts_buttons,
 )
 from utils.telethon_status import send_playing_action
 
@@ -65,6 +67,7 @@ async def yoga_club_getter(dialog_manager: DialogManager, **_):
         print("PUBLICATIONS BUTTON 1", publications_button)
 
         publications_url_text = get_text("publications_url_text", language)
+        prepared_prompts_button = get_text("prepared_prompts_button", language)
 
         return {
             "is_admin": user_id in ADMIN_IDS,
@@ -73,6 +76,7 @@ async def yoga_club_getter(dialog_manager: DialogManager, **_):
             "full_text": "MAIN MENU",
             "publications_button": publications_button,
             "publications_url_text": publications_url_text,
+            "prepared_prompts_button": prepared_prompts_button,
             "time_video": get_text("time_video", language),
             "time_video_button": get_text("time_video_button", language),
         }
@@ -97,6 +101,9 @@ async def yoga_club_getter(dialog_manager: DialogManager, **_):
             "status_text": "",
             "time_video": get_text("time_video", "ru"),
             "time_video_button": get_text("time_video_button", "ru"),
+            "prepared_prompts_button": get_text(
+                "prepared_prompts_button", "ru"
+            ),
         }
 
 
@@ -223,6 +230,16 @@ async def on_publications(
     )
 
 
+async def on_prepared_prompts(
+    c: CallbackQuery, button: Button, manager: DialogManager
+):
+    await manager.start(
+        YogaClubStates.prompts,
+        mode=StartMode.RESET_STACK,
+        show_mode=ShowMode.EDIT,
+    )
+
+
 async def publications_getter(dialog_manager: DialogManager, **_):
     try:
         language = (
@@ -299,6 +316,49 @@ async def on_publications_selected(
     )
 
 
+async def on_prompt_selected(
+    c: CallbackQuery, widget: Select, manager: DialogManager, item_id: str
+):
+    print("PROMPT SELECTED")
+
+    print("ID", item_id)
+    manager.dialog_data["selected_prompt_id"] = item_id
+    await manager.switch_to(
+        YogaClubStates.prompt_selected, show_mode=ShowMode.EDIT
+    )
+
+
+async def prompt_selected_getter(dialog_manager: DialogManager, **_):
+    # print("\n\nPUBLICATION SELECTED GETTER\n\n")
+    language = (
+        await get_user_language(dialog_manager.event.from_user.id) or "ru"
+    )
+    id = dialog_manager.dialog_data.get("selected_prompt_id")
+    new_id = id.split("_")[1]
+    # new_id_minus_one = int(new_id) - 1
+    # print("NEW ID MINUS ONE", new_id_minus_one)
+    photo_pub = await get_pay_photo_attachment(
+        dialog_manager.event.bot,
+        str(
+            Path(__file__).resolve().parent.parent
+            / "misk"
+            / "prompts"
+            / f"{new_id}.png"
+        ),
+    )
+    # print("PHOTO", photo_pub)
+    print("ID", id)
+    publication_text = get_text(f"prompt_{new_id}_text", language)
+
+    # print("PUBLICATION TEXT", publication_text)
+
+    return {
+        "photo_pub": photo_pub,
+        "prompt_text": publication_text,
+        "back_button_to_prompts": get_text("back_button_to_prompts", language),
+    }
+
+
 async def on_time_video(
     c: CallbackQuery, button: Button, manager: DialogManager
 ):
@@ -336,6 +396,37 @@ async def time_video_getter(dialog_manager: DialogManager, **_):
     }
 
 
+async def prepared_prompts_select_getter(dialog_manager: DialogManager, **_):
+    language = (
+        await get_user_language(dialog_manager.event.from_user.id) or "ru"
+    )
+    prepared_prompts = get_text(
+        "prompt_main_text",
+        language,
+    )
+    back_button_to_main_menu = get_text("back_button_to_main_menu", language)
+    # prepared_prompts_button = get_text("prepared_prompts_button", language)
+    photo_pub = await get_pay_photo_attachment(
+        dialog_manager.event.bot,
+        str(
+            Path(__file__).resolve().parent.parent
+            / "misk"
+            / "prompts"
+            / "main.png"
+        ),
+    )
+    # prompts = get_prompts_texts(language)
+    prompts = get_prompts_buttons(language)
+
+    return {
+        "prompts": prompts_buttons,
+        "prompt_main_text": prepared_prompts,
+        "back_button_to_main_menu": back_button_to_main_menu,
+        # "prepared_prompts_button": prepared_prompts_button,
+        "prompt_main_photo": photo_pub,
+    }
+
+
 yoga_club_dialog = Dialog(
     Window(
         Format(
@@ -357,6 +448,11 @@ yoga_club_dialog = Dialog(
     Window(
         DynamicMedia("main_photo", when="main_photo"),
         Format("{title}"),
+        Button(
+            Format("{prepared_prompts_button}"),
+            id="prepared_prompts",
+            on_click=on_prepared_prompts,
+        ),
         Button(
             Format("{time_video_button}"),
             id="time_video",
@@ -453,6 +549,42 @@ yoga_club_dialog = Dialog(
         # on_click=on_publications,
         state=YogaClubStates.publications_selected,
         getter=publication_selected_getter,
+    ),
+    Window(
+        DynamicMedia("prompt_main_photo", when="prompt_main_photo"),
+        Format("{prompt_main_text}"),
+        Group(
+            Select(
+                Format("{item[name]}"),
+                id="prompt_select",
+                item_id_getter=lambda x: x["id"],
+                items="prompts",
+                on_click=on_prompt_selected,
+            ),
+            width=1,
+        ),
+        Button(
+            Format("{back_button_to_main_menu}"),
+            id="back_to_main_menu",
+            on_click=on_main_menu,
+        ),
+        # id="publications_main",
+        # on_click=on_publications,
+        state=YogaClubStates.prompts,
+        getter=prepared_prompts_select_getter,
+    ),
+    Window(
+        DynamicMedia("prompt_photo", when="prompt_photo"),
+        Format("{prompt_text}"),
+        Button(
+            Format("{back_button_to_prompts}"),
+            id="back_to_prompts",
+            # on_click=on_main_menu_prompts,
+        ),
+        # id="publications_main",
+        # on_click=on_publications,
+        state=YogaClubStates.prompt_selected,
+        getter=prompt_selected_getter,
     ),
     # *hello_windows,
 )
