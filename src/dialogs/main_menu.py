@@ -329,34 +329,46 @@ async def on_prompt_selected(
 
 
 async def prompt_selected_getter(dialog_manager: DialogManager, **_):
-    # print("\n\nPUBLICATION SELECTED GETTER\n\n")
-    language = (
-        await get_user_language(dialog_manager.event.from_user.id) or "ru"
-    )
-    id = dialog_manager.dialog_data.get("selected_prompt_id")
-    new_id = id.split("_")[1]
-    # new_id_minus_one = int(new_id) - 1
-    # print("NEW ID MINUS ONE", new_id_minus_one)
-    photo_pub = await get_pay_photo_attachment(
-        dialog_manager.event.bot,
-        str(
-            Path(__file__).resolve().parent.parent
-            / "misk"
-            / "prompts"
-            / f"{new_id}.png"
-        ),
-    )
-    # print("PHOTO", photo_pub)
-    print("ID", id)
-    publication_text = get_text(f"prompt_{new_id}_text", language)
+    try:
+        # print("\n\nPUBLICATION SELECTED GETTER\n\n")
+        language = (
+            await get_user_language(dialog_manager.event.from_user.id) or "ru"
+        )
+        id = dialog_manager.dialog_data.get("selected_prompt_id")
+        new_id = id.split("_")[1]
+        # new_id_minus_one = int(new_id) - 1
+        # print("NEW ID MINUS ONE", new_id_minus_one)
+        photo_pub = await get_pay_photo_attachment(
+            dialog_manager.event.bot,
+            str(
+                Path(__file__).resolve().parent.parent
+                / "misk"
+                / "prompts"
+                / f"{new_id}.png"
+            ),
+        )
+        # print("PHOTO", photo_pub)
+        print("ID", id)
+        publication_text = get_text(f"prompt_{new_id}_text", language)
 
-    # print("PUBLICATION TEXT", publication_text)
+        # print("PUBLICATION TEXT", publication_text)
 
-    return {
-        "photo_pub": photo_pub,
-        "prompt_text": publication_text,
-        "back_button_to_prompts": get_text("back_button_to_prompts", language),
-    }
+        return {
+            "photo_pub": photo_pub,
+            "prompt_text": publication_text,
+            "back_button_to_prompts": get_text(
+                "back_button_to_prompts", language
+            ),
+        }
+    except Exception as e:
+        import traceback
+
+        traceback.print_exc()
+        return {
+            "photo_pub": None,
+            "prompt_text": "Error",
+            "back_button_to_prompts": "Back",
+        }
 
 
 async def on_time_video(
@@ -397,36 +409,49 @@ async def time_video_getter(dialog_manager: DialogManager, **_):
 
 
 async def prepared_prompts_select_getter(dialog_manager: DialogManager, **_):
-    language = (
-        await get_user_language(dialog_manager.event.from_user.id) or "ru"
-    )
-    prepared_prompts = get_text(
-        "prompt_main_text",
-        language,
-    )
-    back_button_to_main_menu = get_text("back_button_to_main_menu", language)
-    # prepared_prompts_button = get_text("prepared_prompts_button", language)
-    photo_pub = await get_pay_photo_attachment(
-        dialog_manager.event.bot,
-        str(
-            Path(__file__).resolve().parent.parent
-            / "misk"
-            / "prompts"
-            / "main.png"
-        ),
-    )
-    # prompts = get_prompts_texts(language)
-    print("promm")
-    prompts = get_prompts_buttons(language)
-    print("promm", prompts)
-    print("prommmmmpts", prepared_prompts)
-    return {
-        "prompts": prompts,
-        "prompt_main_text": prepared_prompts,
-        "back_button_to_main_menu": back_button_to_main_menu,
-        # "prepared_prompts_button": prepared_prompts_button,
-        "prompt_main_photo": photo_pub,
-    }
+    try:
+        language = (
+            await get_user_language(dialog_manager.event.from_user.id) or "ru"
+        )
+        prepared_prompts = get_text(
+            "prompt_main_text",
+            language,
+        )
+        back_button_to_main_menu = get_text(
+            "back_button_to_main_menu", language
+        )
+        # prepared_prompts_button = get_text("prepared_prompts_button", language)
+        photo_pub = await get_pay_photo_attachment(
+            dialog_manager.event.bot,
+            str(
+                Path(__file__).resolve().parent.parent
+                / "misk"
+                / "prompts"
+                / "main.png"
+            ),
+        )
+        # prompts = get_prompts_texts(language)
+        print("promm")
+        prompts = get_prompts_buttons(language)
+        print("promm", prompts)
+        print("prommmmmpts", prepared_prompts)
+        return {
+            "prompts": prompts,
+            "prompt_main_text": prepared_prompts,
+            "back_button_to_main_menu": back_button_to_main_menu,
+            # "prepared_prompts_button": prepared_prompts_button,
+            "prompt_main_photo": photo_pub,
+        }
+    except Exception as e:
+        import traceback
+
+        traceback.print_exc()
+        return {
+            "prompts": [],
+            "prompt_main_text": "Error",
+            "back_button_to_main_menu": "Back",
+            "prompt_main_photo": None,
+        }
 
 
 yoga_club_dialog = Dialog(
