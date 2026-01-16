@@ -125,6 +125,15 @@ async def on_main_menu_publications(
     )
 
 
+async def on_main_menu_prompts(
+    c: CallbackQuery, button: Button, manager: DialogManager
+):
+    await manager.switch_to(
+        YogaClubStates.prompts,
+        show_mode=ShowMode.EDIT,
+    )
+
+
 async def test_period_handler(
     c: CallbackQuery, button: Button, manager: DialogManager
 ):
@@ -354,7 +363,7 @@ async def prompt_selected_getter(dialog_manager: DialogManager, **_):
         # print("PUBLICATION TEXT", publication_text)
 
         return {
-            "photo_pub": photo_pub,
+            "prompt_photo": photo_pub,
             "prompt_text": publication_text,
             "back_button_to_prompts": get_text(
                 "back_button_to_prompts", language
@@ -606,7 +615,7 @@ yoga_club_dialog = Dialog(
         Button(
             Format("{back_button_to_prompts}"),
             id="back_to_prompts",
-            # on_click=on_main_menu_prompts,
+            on_click=on_main_menu_prompts,
         ),
         # id="publications_main",
         # on_click=on_publications,
