@@ -26,7 +26,7 @@ ALL_PROMPTS = {
 
 PROMPT_1 = {
     "ru": """
-<b>Стиль интерьера:</b> <i><u>мягкий минимализм.</u></i>
+<b>Стиль интерьера:</b> <i><u>Мягкий минимализм.</u></i>
 
 <code>Photorealistic living room in a soft minimalist style — warm, tactile, serene, premium. Beige-greige palette, soft diffused daylight through sheer curtains, wide-plank light oak floor, smooth hand-troweled plaster walls in warm ivory. Low sculptural furniture: curved boucle sofa, matching lounge chair, organic travertine coffee table with rounded edges, low oak console with ceramic vessels and stacked books. Subtle human presence: linen throw, ceramic cup, single open book — no clutter. Tonal color accents only: ivory, oat, sand, greige; no bold hues or graphic patterns. Quiet layered lighting: daylight from the left, warm cove lighting above, slim floor lamp with fabric shade; atmosphere calm, contemplative, lived-in. Clean proportions, gentle curves, honest natural materials, no decorative excess, no surreal geometry. Shot at eye level (about 1.3 m), 3/4 room view, 35 mm lens, photorealistic global illumination, accurate PBR materials, soft natural shadows, ultra-high resolution.</code>
 """,
@@ -40,7 +40,7 @@ PROMPT_1 = {
 
 PROMPT_2 = {
     "ru": """
-<b>Стиль интерьера:</b> <i><u>арт-деко.</u></i>
+<b>Стиль интерьера:</b> <i><u>Арт-деко.</u></i>
 
 <code>Photorealistic interior in contemporary Art Deco style — refined, geometric, luxurious yet controlled. Architectural rhythm: fluted panels, arched openings, stepped profiles, symmetry and strong axial composition. Materials: dark walnut veneer, polished marble, high-gloss lacquer, smoked glass, satin upholstery. Brass accents as expressive highlights: lighting fixtures, table bases, framing details, inlays, hardware. Color palette: espresso, charcoal, ivory, champagne metallics, and muted jewel tones used sparingly. Lighting: layered and dramatic — sconces, chandelier, indirect cove light, crisp shadows, reflective surfaces. Maintain real scale, clean proportions, premium textures, no surreal distortion. Shot at eye level, 3/4 room view, 35mm lens, photorealistic GI, ray</code>-<code>traced reflections, ultra-high resolution.</code>
 """,
