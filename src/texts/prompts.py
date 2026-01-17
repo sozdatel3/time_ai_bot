@@ -31,7 +31,7 @@ PROMPT_1 = {
 <code>Photorealistic living room, soft minimalist style — warm, tactile, serene. Beige-greige palette, diffused daylight, light oak floor, ivory plaster walls. Low sculptural furniture: curved boucle sofa, lounge chair, travertine coffee table, low console. Details: linen throw, ceramic cup, open book — no clutter. Tones: ivory, oat, sand, greige. Layered lighting: daylight from left, cove lighting, slim floor lamp. Clean proportions, gentle curves, natural materials. Shot at eye level (1.3m), 3/4 view, 35mm lens, photorealistic GI, PBR materials, soft shadows, 8k resolution.</code>
 """,
     "en": """
-<b>Interior style:</b> <i><u>soft minimalism.</u></i>
+<b>Interior style:</b> <i><u>Soft minimalism.</u></i>
 
 <code>Photorealistic living room, soft minimalist style — warm, tactile, serene. Beige-greige palette, diffused daylight, light oak floor, ivory plaster walls. Low sculptural furniture: curved boucle sofa, lounge chair, travertine coffee table, low console. Details: linen throw, ceramic cup, open book — no clutter. Tones: ivory, oat, sand, greige. Layered lighting: daylight from left, cove lighting, slim floor lamp. Clean proportions, gentle curves, natural materials. Shot at eye level (1.3m), 3/4 view, 35mm lens, photorealistic GI, PBR materials, soft shadows, 8k resolution.</code>
 """,
@@ -45,7 +45,7 @@ PROMPT_2 = {
 <code>Photorealistic interior in contemporary Art Deco style — refined, geometric, luxurious yet controlled. Architectural rhythm: fluted panels, arched openings, stepped profiles, symmetry and strong axial composition. Materials: dark walnut veneer, polished marble, high-gloss lacquer, smoked glass, satin upholstery. Brass accents as expressive highlights: lighting fixtures, table bases, framing details, inlays, hardware. Color palette: espresso, charcoal, ivory, champagne metallics, and muted jewel tones used sparingly. Lighting: layered and dramatic — sconces, chandelier, indirect cove light, crisp shadows, reflective surfaces. Maintain real scale, clean proportions, premium textures, no surreal distortion. Shot at eye level, 3/4 room view, 35mm lens, photorealistic GI, ray</code>-<code>traced reflections, ultra-high resolution.</code>
 """,
     "en": """
-<b>Interior style:</b> <i><u>art deco.</u></i>
+<b>Interior style:</b> <i><u>Art deco.</u></i>
 
 <code>Photorealistic interior in contemporary Art Deco style — refined, geometric, luxurious yet controlled. Architectural rhythm: fluted panels, arched openings, stepped profiles, symmetry and strong axial composition. Materials: dark walnut veneer, polished marble, high-gloss lacquer, smoked glass, satin upholstery. Brass accents as expressive highlights: lighting fixtures, table bases, framing details, inlays, hardware. Color palette: espresso, charcoal, ivory, champagne metallics, and muted jewel tones used sparingly. Lighting: layered and dramatic — sconces, chandelier, indirect cove light, crisp shadows, reflective surfaces. Maintain real scale, clean proportions, premium textures, no surreal distortion. Shot at eye level, 3/4 room view, 35mm lens, photorealistic GI, ray</code>-<code>traced reflections, ultra-high resolution.</code>
 """,
@@ -58,7 +58,7 @@ PROMPT_3 = {
 <code>Photorealistic minimalist interior, Biophilia 2.0 — calm, tactile, wellness-oriented. Living moss walls in architectural panels. Warm daylight from large windows and skylights. Materials: light oak, limestone, clay plaster, linen, wool, matte black hardware, warm brass accents. Low, tactile furniture: upholstered sofa, modular cushions, natural textiles. Natural palette: moss green, sage, oat, sand, warm neutrals. Atmosphere of comfort and nature. Real-world scale, clean proportions. Eye level (1.3m), 3/4 view, 35mm lens, photorealistic GI, PBR materials, soft shadows, 8k resolution.</code>
 """,
     "en": """
-<b>Interior style:</b> <i><u>biophilia 2.0</u></i>
+<b>Interior style:</b> <i><u>Biophilia 2.0</u></i>
 
 <code>Photorealistic minimalist interior, Biophilia 2.0 — calm, tactile, wellness-oriented. Living moss walls in architectural panels. Warm daylight from large windows and skylights. Materials: light oak, limestone, clay plaster, linen, wool, matte black hardware, warm brass accents. Low, tactile furniture: upholstered sofa, modular cushions, natural textiles. Natural palette: moss green, sage, oat, sand, warm neutrals. Atmosphere of comfort and nature. Real-world scale, clean proportions. Eye level (1.3m), 3/4 view, 35mm lens, photorealistic GI, PBR materials, soft shadows, 8k resolution.</code>
 """,
