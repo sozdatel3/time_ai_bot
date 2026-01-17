@@ -61,7 +61,7 @@ Welcome to TimeAI — a space where next-generation design is born!</i>""",
 
 TimeAI explores how a person’s inner world transforms into a cubist interior. The protagonist, with their own rhythm, character and dreams, becomes the focal point of the space, while the neural network acts as a subtle co-author, bringing together the person and the home into a single visual story.
 
-Here, Cubism is the language of multidimensional thinking: fractured planes, the rhythm of lines, textures and light as a director create a space with no sense of «someone else’s house». The interior genuinely belongs to its owner and articulates their essence."
+Here, Cubism is the language of multidimensional thinking: fractured planes, the rhythm of lines, textures and light as a director create a space with no sense of «someone else’s house». The interior genuinely belongs to its owner and articulates their essence.
         """,
         "time_video_button": "Person & Interior",
         "time_stat_button": "Article on Dsgners",
@@ -70,9 +70,9 @@ Here, Cubism is the language of multidimensional thinking: fractured planes, the
 
 Hey everyone!
 
-We're excited to share some inspiration and exclusive prompts for instant generation of trending interiors: soft minimalism, art deco, biophilia 2.0, japandi, plus unique RU-CN fusion styles from TimeAI!
+We're excited to share some inspiration and exclusive prompts for instant generation of trending interiors: soft minimalism, art-deco, biophilia 2.0, japandi, plus unique RU-CN fusion styles from TimeAI!
 
-AI creates harmonious spaces through the lens of "Human & Interior" philosophy — tailored to your personality and needs, in just seconds.
+AI creates harmonious spaces through the lens of «Human & Interior» philosophy — tailored to your personality and needs, in just seconds.
 
 Save hours on routine work — boost your creativity!
 

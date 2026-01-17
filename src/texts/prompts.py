@@ -9,7 +9,7 @@ ALL_PROMPTS_list_ru = [
 
 ALL_PROMPTS_list_en = [
     "Soft Minimalism",
-    "Art Deco",
+    "Art-Deco",
     "Biophilia 2.0",
     "Japandi",
     "Chi & Modern",
