@@ -1,5 +1,4 @@
-from texts import publications
-from texts import prompts
+from texts import prompts, publications
 
 """
 Simple text localization system.
@@ -83,7 +82,7 @@ Share your style ideas — we'll create a custom prompt for you!""",
         "back_button_to_prompts": """←""",
     },
     "ru": {
-        "prepared_prompts_button": "Готовые промпты 2026",
+        "prepared_prompts_button": "Промпты 2026 — бери и твори",
         "prompt_main_text": """<b>Готовые промпты 2026:</b> <i><u>трендовые стили интерьера без навыков prompt engineering.</u></i>
 
 Друзья!
