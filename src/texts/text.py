@@ -83,7 +83,7 @@ Share your style ideas — we'll create a custom prompt for you!""",
         "share_idea_button": "Share idea",
     },
     "ru": {
-        "share_idea_button": "Поделться идеей",
+        "share_idea_button": "Поделиться идеей",
         "prepared_prompts_button": "Промпты 2026 — бери и твори",
         "prompt_main_text": """<b>Готовые промпты 2026:</b> <i><u>трендовые стили интерьера без навыков prompt engineering.</u></i>
 
