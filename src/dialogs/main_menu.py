@@ -24,10 +24,9 @@ from db.models.asto_info import get_astro_info
 from db.models.old_workflow.big_mes import get_pay_photo_attachment
 from db.models.user import get_user, get_user_language, set_language
 from texts.text import (
+    get_prompts_buttons,
     get_publications_buttons,
     get_text,
-    get_prompts_texts,
-    get_prompts_buttons,
 )
 from utils.telethon_status import send_playing_action
 
@@ -369,7 +368,7 @@ async def prompt_selected_getter(dialog_manager: DialogManager, **_):
                 "back_button_to_prompts", language
             ),
         }
-    except Exception as e:
+    except Exception:
         import traceback
 
         traceback.print_exc()
@@ -429,6 +428,7 @@ async def prepared_prompts_select_getter(dialog_manager: DialogManager, **_):
         back_button_to_main_menu = get_text(
             "back_button_to_main_menu", language
         )
+        share_idea_button = get_text("share_idea_button", language)
         # prepared_prompts_button = get_text("prepared_prompts_button", language)
         photo_pub = await get_pay_photo_attachment(
             dialog_manager.event.bot,
@@ -448,10 +448,11 @@ async def prepared_prompts_select_getter(dialog_manager: DialogManager, **_):
             "prompts": prompts,
             "prompt_main_text": prepared_prompts,
             "back_button_to_main_menu": back_button_to_main_menu,
+            "share_idea_button": share_idea_button,
             # "prepared_prompts_button": prepared_prompts_button,
             "prompt_main_photo": photo_pub,
         }
-    except Exception as e:
+    except Exception:
         import traceback
 
         traceback.print_exc()
@@ -459,6 +460,7 @@ async def prepared_prompts_select_getter(dialog_manager: DialogManager, **_):
             "prompts": [],
             "prompt_main_text": "Error",
             "back_button_to_main_menu": "Back",
+            "share_idea_button": "share_idea_button",
             "prompt_main_photo": None,
         }
 
@@ -589,6 +591,7 @@ yoga_club_dialog = Dialog(
     Window(
         DynamicMedia("prompt_main_photo", when="prompt_main_photo"),
         Format("{prompt_main_text}"),
+        Url(Format("{share_idea_button}"), url=Format("t.me/timeai_support")),
         Group(
             Select(
                 Format("{item[name]}"),

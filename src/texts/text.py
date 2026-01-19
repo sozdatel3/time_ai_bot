@@ -80,8 +80,10 @@ Subscribe to timeai.ai — get free access to generations first!
 
 Share your style ideas — we'll create a custom prompt for you!""",
         "back_button_to_prompts": """←""",
+        "share_idea_button": "Share idea",
     },
     "ru": {
+        "share_idea_button": "Поделться идеей",
         "prepared_prompts_button": "Промпты 2026 — бери и твори",
         "prompt_main_text": """<b>Готовые промпты 2026:</b> <i><u>трендовые стили интерьера без навыков prompt engineering.</u></i>
 
