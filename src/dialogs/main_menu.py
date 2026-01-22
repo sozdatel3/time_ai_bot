@@ -37,6 +37,8 @@ from .states import (
     YogaClubStates,
 )
 
+# ᛞᛜᚠᛃᚱᚷ
+
 
 async def yoga_club_getter(dialog_manager: DialogManager, **_):
     try:
