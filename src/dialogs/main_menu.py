@@ -80,6 +80,7 @@ async def yoga_club_getter(dialog_manager: DialogManager, **_):
             "prepared_prompts_button": prepared_prompts_button,
             "time_video": get_text("time_video", language),
             "time_video_button": get_text("time_video_button", language),
+            "minimal_button": get_text("minimal_button", language),
         }
     except Exception:
         import traceback
@@ -105,6 +106,7 @@ async def yoga_club_getter(dialog_manager: DialogManager, **_):
             "prepared_prompts_button": get_text(
                 "prepared_prompts_button", "ru"
             ),
+            "minimal_button": get_text("minimal_button", "ru"),
         }
 
 
@@ -467,6 +469,28 @@ async def prepared_prompts_select_getter(dialog_manager: DialogManager, **_):
         }
 
 
+async def on_minimalist_button(
+    c: CallbackQuery, button: Button, manager: DialogManager
+):
+    await manager.switch_to(YogaClubStates.minimal, show_mode=ShowMode.EDIT)
+
+
+async def minimal_getter(dialog_manager: DialogManager, **_):
+    language = (
+        await get_user_language(dialog_manager.event.from_user.id) or "ru"
+    )
+    photo = await get_pay_photo_attachment(
+        dialog_manager.event.bot,
+        str(Path(__file__).resolve().parent.parent / "misk" / "minimal.png"),
+    )
+    return {
+        "minimal_text": get_text("minimal_text", language),
+        "minimal_designers": get_text("minimal_designers", language),
+        "minimal_dzen": get_text("minimal_dzen", language),
+        "minimal_photo": photo,
+    }
+
+
 yoga_club_dialog = Dialog(
     Window(
         Format(
@@ -492,6 +516,11 @@ yoga_club_dialog = Dialog(
             Format("{prepared_prompts_button}"),
             id="prepared_prompts",
             on_click=on_prepared_prompts,
+        ),
+        Button(
+            Format("{minimal_button}"),
+            id="minimalist_button",
+            on_click=on_minimalist_button,
         ),
         Button(
             Format("{time_video_button}"),
@@ -535,6 +564,27 @@ yoga_club_dialog = Dialog(
         ),
         state=YogaClubStates.main,
         getter=yoga_club_getter,
+    ),
+    Window(
+        DynamicMedia("minimal_photo", when="minimal_photo"),
+        Format("{minimal_text}"),
+        Url(
+            Format("{minimal_designers}"),
+            Format(
+                "https://dsgners.ru/timeaiai/27875-timeai-vision-minimalizm-iskusstvo-videt-chische"
+            ),
+        ),
+        Url(
+            Format("{minimal_dzen}"),
+            Format("https://dzen.ru/a/aU13ayslZkA4j37S"),
+        ),
+        Button(
+            Format("←"),
+            id="back_to_main_menu",
+            on_click=on_main_menu,
+        ),
+        getter=minimal_getter,
+        state=YogaClubStates.minimal,
     ),
     Window(
         DynamicMedia("time_video_gif", when="time_video_gif"),

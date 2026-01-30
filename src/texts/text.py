@@ -2,6 +2,7 @@ from texts import prompts, publications
 
 """
 Simple text localization system.
+ᛞᛜᚠᛃᚱᚷ
 """
 
 # PUBLICATIONS = [
@@ -56,9 +57,9 @@ Welcome to TimeAI — a space where next-generation design is born!</i>""",
         "prompt_6_text": prompts.PROMPT_6["en"],
         # "publication_5_text": publications.PUBLICATION_5["en"],
         "publications_url_text": "Open TimeAI",
+        # ᛞᛜᚠᛃᚱᚷ
         "time_video": """
 <b>Human & Interior</b> <i><u>in the style of Cubism.</u></i>
-
 TimeAI explores how a person’s inner world transforms into a cubist interior. The protagonist, with their own rhythm, character and dreams, becomes the focal point of the space, while the neural network acts as a subtle co-author, bringing together the person and the home into a single visual story.
 
 Here, Cubism is the language of multidimensional thinking: fractured planes, the rhythm of lines, textures and light as a director create a space with no sense of «someone else’s house». The interior genuinely belongs to its owner and articulates their essence.
@@ -81,8 +82,32 @@ Subscribe to timeai.ai — get free access to generations first!
 Share your style ideas — we'll create a custom prompt for you!""",
         "back_button_to_prompts": """←""",
         "share_idea_button": "Share idea",
+        "minimal_button": "Purity of Minimalism",
+        "minimal_text": """<b>TimeAI Vision | Minimalism: </b><i><u>the art of seeing more clearly.</u></i>
+
+Minimalism is the language of space. A clean canvas in an age of digital noise, where lines breathe, form gains clarity, and silence fills the space with meaning and air.
+
+It is freedom, light, and inner breath. Today, minimalism is once again at its peak — when simplicity and depth meet within a single frame, freeing space and consciousness from the unnecessary. Sometimes the silence of an interior speaks louder than words, becoming an aesthetic of calm and functionality.
+
+How do you create a space where air becomes décor, and every detail is a source of harmony?
+
+Read about the philosophy of minimalism and the inspiration of a new generation with TimeAI, and subscribe at www.timeai.ai to be the first.
+Launching soon!""",
+        "minimal_designers": "Article on Dsgners",
+        "minimal_dzen": "Article on Dzen",
     },
     "ru": {
+        "minimal_button": "Чистота минимализма",
+        "minimal_text": """<b>TimeAI Vision | Минимализм:</b> <i><u>искусство видеть чище.</u></i>
+
+Минимализм — язык пространства. Чистый холст в эпоху цифрового шума, где линии дышат, форма обретает ясность, а тишина наполняет смыслом и воздухом.
+
+Это свобода, свет и внутреннее дыхание. Сегодня минимализм снова на пике — когда простота и глубина сходятся в одном кадре, освобождая пространство и сознание от лишнего. Иногда тишина интерьера звучит громче слов, становясь эстетикой покоя и функциональности.
+
+Как создать пространство, где воздух становится декором, а каждая деталь — источником гармонии?  
+
+Читайте о философии минимализма и вдохновении нового поколения с TimeAI и подписывайтесь на сайте www.timeai.ai, чтобы быть первыми.
+Скоро старт!""",
         "share_idea_button": "Поделиться идеей",
         "prepared_prompts_button": "Промпты 2026 — бери и твори",
         "prompt_main_text": """<b>Готовые промпты 2026:</b> <i><u>трендовые стили интерьера без навыков prompt engineering.</u></i>
@@ -155,6 +180,8 @@ TimeAI исследует, как внутренний мир человека �
         # Как сказал Билли Болдуин, легендарный декоратор: «Самое худшее, что любой декоратор может сделать, — это дать клиенту ощущение, что он гуляет в чужом доме. Интерьеры должны принадлежать владельцу, а не быть отражением декоратора».
         "time_video_button": "Человек & Интерьер",
         "time_stat_button": "Статья на Dsgners",
+        "minimal_designers": "Статья на Dsgners",
+        "minimal_dzen": "Статья на Dzen",
     },
 }
 

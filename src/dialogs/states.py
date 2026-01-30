@@ -132,6 +132,7 @@ class StatisticStates(StatesGroup):
 
 class YogaClubStates(StatesGroup):
     main = State()
+    minimal = State()
     name = State()
     name_2 = State()
     what_inside = State()
