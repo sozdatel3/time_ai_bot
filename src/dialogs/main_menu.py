@@ -508,7 +508,7 @@ async def vintaaj_getter(dialog_manager: DialogManager, **_):
         str(Path(__file__).resolve().parent.parent / "misk" / "vintaaj.png"),
     )
     return {
-        "minimal_text": get_text("vintaaj_text", language),
+        "vintaaj_text": get_text("vintaaj_text", language),
         "minimal_designers": get_text("minimal_designers", language),
         "minimal_dzen": get_text("minimal_dzen", language),
         "vintaaj_photo": photo,

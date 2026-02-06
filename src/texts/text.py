@@ -95,6 +95,19 @@ Read about the philosophy of minimalism and the inspiration of a new generation 
 Launching soon!""",
         "minimal_designers": "Article on Dsgners",
         "minimal_dzen": "Article on Dzen",
+        "vintaaj_button": "Vintage of the Epochs",
+        "vintaaj_text": """<b>Vintage</b> — <i><u>a symbiosis of bygone eras.</u></i>
+
+The vintage style is the timeless art of authenticity: aged oak, brass, lace textiles, patina effect. A neutral wall background comes alive with accents — antique chests of drawers, 1940s gramophones, delicate porcelain, Viennese Thonet chairs, moldings, tapestries…
+
+Like well-aged wine from an old cellar, it acquires the aroma of nostalgia: warm, a bit wistful, full of stories from the past.
+
+Vintage outlives trends, merges with modernity, adds the coziness of flea market finds, and turns the home into a personal narrative.
+
+TimeAI masterfully generates patinated textures and fusion: from budget treasures to a symbiosis of eras, your interior will gain a unique signature.
+
+TimeAI launch coming soon.
+Join the symbiosis of vintage creativity in its modern interpretation!""",
     },
     "ru": {
         "minimal_button": "Чистота минимализма",
