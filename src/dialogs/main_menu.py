@@ -81,6 +81,7 @@ async def yoga_club_getter(dialog_manager: DialogManager, **_):
             "time_video": get_text("time_video", language),
             "time_video_button": get_text("time_video_button", language),
             "minimal_button": get_text("minimal_button", language),
+            "vintaaj_button": get_text("vintaaj_button", language),
         }
     except Exception:
         import traceback
@@ -107,6 +108,7 @@ async def yoga_club_getter(dialog_manager: DialogManager, **_):
                 "prepared_prompts_button", "ru"
             ),
             "minimal_button": get_text("minimal_button", "ru"),
+            "vintaaj_button": get_text("vintaaj_button", "ru"),
         }
 
 
@@ -475,6 +477,12 @@ async def on_minimalist_button(
     await manager.switch_to(YogaClubStates.minimal, show_mode=ShowMode.EDIT)
 
 
+async def on_vintaaj_button(
+    c: CallbackQuery, button: Button, manager: DialogManager
+):
+    await manager.switch_to(YogaClubStates.vintaaj, show_mode=ShowMode.EDIT)
+
+
 async def minimal_getter(dialog_manager: DialogManager, **_):
     language = (
         await get_user_language(dialog_manager.event.from_user.id) or "ru"
@@ -488,6 +496,22 @@ async def minimal_getter(dialog_manager: DialogManager, **_):
         "minimal_designers": get_text("minimal_designers", language),
         "minimal_dzen": get_text("minimal_dzen", language),
         "minimal_photo": photo,
+    }
+
+
+async def vintaaj_getter(dialog_manager: DialogManager, **_):
+    language = (
+        await get_user_language(dialog_manager.event.from_user.id) or "ru"
+    )
+    photo = await get_pay_photo_attachment(
+        dialog_manager.event.bot,
+        str(Path(__file__).resolve().parent.parent / "misk" / "vintaaj.png"),
+    )
+    return {
+        "minimal_text": get_text("vintaaj_text", language),
+        "minimal_designers": get_text("minimal_designers", language),
+        "minimal_dzen": get_text("minimal_dzen", language),
+        "vintaaj_photo": photo,
     }
 
 
@@ -516,6 +540,11 @@ yoga_club_dialog = Dialog(
             Format("{prepared_prompts_button}"),
             id="prepared_prompts",
             on_click=on_prepared_prompts,
+        ),
+        Button(
+            Format("{vintaaj_button}"),
+            id="vintaaj_button",
+            on_click=on_vintaaj_button,
         ),
         Button(
             Format("{minimal_button}"),
@@ -585,6 +614,27 @@ yoga_club_dialog = Dialog(
         ),
         getter=minimal_getter,
         state=YogaClubStates.minimal,
+    ),
+    Window(
+        DynamicMedia("vintaaj_photo", when="vintaaj_photo"),
+        Format("{vintaaj_text}"),
+        Url(
+            Format("{minimal_designers}"),
+            Format(
+                "https://dsgners.ru/timeaiai/34276-vintaj-simbioz-nezabyityih-epoh"
+            ),
+        ),
+        Url(
+            Format("{minimal_dzen}"),
+            Format("https://dzen.ru/a/aYW-gMLNOlD_d4wN?share_to=telegram"),
+        ),
+        Button(
+            Format("←"),
+            id="back_to_main_menu",
+            on_click=on_main_menu,
+        ),
+        getter=vintaaj_getter,
+        state=YogaClubStates.vintaaj,
     ),
     Window(
         DynamicMedia("time_video_gif", when="time_video_gif"),
