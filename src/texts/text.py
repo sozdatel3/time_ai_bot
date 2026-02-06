@@ -111,7 +111,7 @@ Join the symbiosis of vintage creativity in its modern interpretation!""",
     },
     "ru": {
         "minimal_button": "Чистота минимализма",
-        "vintaaj_button": "Винтаж эпох.",
+        "vintaaj_button": "Винтаж эпох",
         "minimal_text": """<b>TimeAI Vision | Минимализм:</b> <i><u>искусство видеть чище.</u></i>
 
 Минимализм — язык пространства. Чистый холст в эпоху цифрового шума, где линии дышат, форма обретает ясность, а тишина наполняет смыслом и воздухом.
