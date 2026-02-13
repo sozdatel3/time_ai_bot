@@ -108,8 +108,36 @@ TimeAI masterfully generates patinated textures and fusion: from budget treasure
 
 TimeAI launch coming soon.
 Join the symbiosis of vintage creativity in its modern interpretation!""",
+        "goticks_button": "Gothic Aesthetics",
+        "goticks_text": """<b>Gothic Aesthetics in Modern Interiors with TimeAI.</b>
+
+Gothic beyond time: mysticism meets AI.
+
+A symphony of pointed arches, stained glass, and carved shapes — not gloom, but subtle depth, where ancient magic merges with minimalism, loft, and eclecticism.
+
+• In the living room — arched windows playing with light, eclectic armchairs, and candelabras.
+• In the bedroom — a carved headboard with velvet drapery.
+• Study and loft with wrought iron and vintage touches.
+
+Neutral tones, warm lighting, and the tactile quality of velvet create a cozy magnetism.
+
+TimeAI transforms gothic experiments into vivid concepts.""",
     },
     "ru": {
+        "goticks_button": "Эстетика готики",
+        "goticks_text": """<b>Эстетика готики в современном интерьере с TimeAI.</b>
+
+Готика вне времени: мистика встречает AI.
+
+Симфония стрельчатых арок, витражей и резных форм — не мрак, а лёгкая глубина, где древняя магия сливается с минимализмом, лофтом и эклектикой.
+
+• В гостиной — арочные окна с игрой света, эклектичные кресла и канделябры.
+• В спальне — резное изголовье с бархатными драпировками.
+• Кабинет и лофт с ковкой и винтажем.
+
+Нейтральные тона, тёплый свет и тактильность бархата создают уютный магнетизм.
+
+TimeAI превращает готические эксперименты в живые концепции.""",
         "minimal_button": "Чистота минимализма",
         "vintaaj_button": "Винтаж эпох",
         "minimal_text": """<b>TimeAI Vision | Минимализм:</b> <i><u>искусство видеть чище.</u></i>

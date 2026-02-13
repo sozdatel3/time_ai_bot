@@ -286,6 +286,7 @@ async def publications_getter(dialog_manager: DialogManager, **_):
         "time_video_button": get_text("time_video_button", language),
         "minimal_button": get_text("minimal_button", language),
         "vintaaj_button": get_text("vintaaj_button", language),
+        "goticks_button": get_text("goticks_button", language),
     }
 
 
@@ -519,6 +520,36 @@ async def vintaaj_getter(dialog_manager: DialogManager, **_):
     }
 
 
+async def goticks_getter(dialog_manager: DialogManager, **_):
+    language = (
+        await get_user_language(dialog_manager.event.from_user.id) or "ru"
+    )
+    photo = await get_pay_photo_attachment(
+        dialog_manager.event.bot,
+        str(
+            Path(__file__).resolve().parent.parent
+            / "misk"
+            / "publication"
+            / "5.png"
+        ),
+    )
+    return {
+        "goticks_text": get_text("goticks_text", language),
+        "goticks_photo": photo,
+        "minimal_designers": get_text("minimal_designers", language),
+        "minimal_dzen": get_text("minimal_dzen", language),
+        "back_button_to_publications": get_text(
+            "back_button_to_publications", language
+        ),
+    }
+
+
+async def on_goticks_button(
+    c: CallbackQuery, button: Button, manager: DialogManager
+):
+    await manager.switch_to(YogaClubStates.goticks, show_mode=ShowMode.EDIT)
+
+
 yoga_club_dialog = Dialog(
     Window(
         Format(
@@ -660,6 +691,11 @@ yoga_club_dialog = Dialog(
         #     width=1,
         # ),
         Button(
+            Format("{goticks_button}"),
+            id="goticks_button",
+            on_click=on_goticks_button,
+        ),
+        Button(
             Format("{vintaaj_button}"),
             id="vintaaj_button",
             on_click=on_vintaaj_button,
@@ -683,6 +719,28 @@ yoga_club_dialog = Dialog(
         # on_click=on_publications,
         state=YogaClubStates.publications,
         getter=publications_getter,
+    ),
+    Window(
+        DynamicMedia("goticks_photo", when="goticks_photo"),
+        Format("{goticks_text}"),
+        Url(
+            Format("{minimal_designers}"),
+            Format(
+                "https://dsgners.ru/timeaiai/18826-gotika-vne-vremeni-iskusstvo-i-ii-v-sovremennom-prochtenii-interera"
+            ),
+        ),
+        Url(
+            Format("{minimal_dzen}"),
+            Format("https://dzen.ru/a/aQPES5PMAhbhsVqE?share_to=telegram"),
+        ),
+        Button(
+            Format("←"),
+            id="back_to_main_menu",
+            # on_click=on_main_menu,
+            on_click=on_main_menu_publications,
+        ),
+        state=YogaClubStates.goticks,
+        getter=goticks_getter,
     ),
     Window(
         DynamicMedia("photo_pub", when="photo_pub"),
