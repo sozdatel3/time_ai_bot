@@ -282,6 +282,10 @@ async def publications_getter(dialog_manager: DialogManager, **_):
         "back_button_to_main_menu": get_text(
             "back_button_to_main_menu", language
         ),
+        "time_video": get_text("time_video", language),
+        "time_video_button": get_text("time_video_button", language),
+        "minimal_button": get_text("minimal_button", language),
+        "vintaaj_button": get_text("vintaaj_button", language),
     }
 
 
@@ -542,21 +546,6 @@ yoga_club_dialog = Dialog(
             on_click=on_prepared_prompts,
         ),
         Button(
-            Format("{vintaaj_button}"),
-            id="vintaaj_button",
-            on_click=on_vintaaj_button,
-        ),
-        Button(
-            Format("{minimal_button}"),
-            id="minimalist_button",
-            on_click=on_minimalist_button,
-        ),
-        Button(
-            Format("{time_video_button}"),
-            id="time_video",
-            on_click=on_time_video,
-        ),
-        Button(
             Format("{publications_button}"),
             id="publications",
             on_click=on_publications,
@@ -610,7 +599,8 @@ yoga_club_dialog = Dialog(
         Button(
             Format("←"),
             id="back_to_main_menu",
-            on_click=on_main_menu,
+            # on_click=on_main_menu,
+            on_click=on_main_menu_publications,
         ),
         getter=minimal_getter,
         state=YogaClubStates.minimal,
@@ -631,7 +621,8 @@ yoga_club_dialog = Dialog(
         Button(
             Format("←"),
             id="back_to_main_menu",
-            on_click=on_main_menu,
+            # on_click=on_main_menu,
+            on_click=on_main_menu_publications,
         ),
         getter=vintaaj_getter,
         state=YogaClubStates.vintaaj,
@@ -649,7 +640,8 @@ yoga_club_dialog = Dialog(
         Button(
             Format("{back_button_to_main_menu}"),
             id="back_to_main_menu",
-            on_click=on_main_menu,
+            # on_click=on_main_menu,
+            on_click=on_main_menu_publications,
         ),
         state=YogaClubStates.time_video,
         getter=time_video_getter,
@@ -657,15 +649,30 @@ yoga_club_dialog = Dialog(
     Window(
         DynamicMedia("photo", when="photo"),
         Format("{publications_text}"),
-        Group(
-            Select(
-                Format("{item[name]}"),
-                id="publications_select",
-                item_id_getter=lambda x: x["id"],
-                items="publications",
-                on_click=on_publications_selected,
-            ),
-            width=1,
+        # Group(
+        #     Select(
+        #         Format("{item[name]}"),
+        #         id="publications_select",
+        #         item_id_getter=lambda x: x["id"],
+        #         items="publications",
+        #         on_click=on_publications_selected,
+        #     ),
+        #     width=1,
+        # ),
+        Button(
+            Format("{vintaaj_button}"),
+            id="vintaaj_button",
+            on_click=on_vintaaj_button,
+        ),
+        Button(
+            Format("{minimal_button}"),
+            id="minimalist_button",
+            on_click=on_minimalist_button,
+        ),
+        Button(
+            Format("{time_video_button}"),
+            id="time_video",
+            on_click=on_time_video,
         ),
         Button(
             Format("{back_button_to_main_menu}"),

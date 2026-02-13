@@ -254,22 +254,22 @@ def get_text(
 
 def get_publications_buttons(language: str = DEFAULT_LANGUAGE):
     return [
-        {
-            "id": "publication_1_button",
-            "name": get_text("publication_1_button", language),
-        },
-        {
-            "id": "publication_2_button",
-            "name": get_text("publication_2_button", language),
-        },
-        {
-            "id": "publication_3_button",
-            "name": get_text("publication_3_button", language),
-        },
-        {
-            "id": "publication_4_button",
-            "name": get_text("publication_4_button", language),
-        },
+        # {
+        #     "id": "publication_1_button",
+        #     "name": get_text("publication_1_button", language),
+        # },
+        # {
+        #     "id": "publication_2_button",
+        #     "name": get_text("publication_2_button", language),
+        # },
+        # {
+        #     "id": "publication_3_button",
+        #     "name": get_text("publication_3_button", language),
+        # },
+        # {
+        #     "id": "publication_4_button",
+        #     "name": get_text("publication_4_button", language),
+        # },
         # {
         #     "id": "publication_5_button",
         #     "name": get_text("publication_5_button", language),
