@@ -530,7 +530,7 @@ async def goticks_getter(dialog_manager: DialogManager, **_):
             Path(__file__).resolve().parent.parent
             / "misk"
             / "publication"
-            / "5.png"
+            / "5.jpg"
         ),
     )
     return {
